@@ -15,21 +15,16 @@ export default function Home() {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
         <div className="container mx-auto flex items-center justify-between h-16">
-          <div className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg">S&L</span>
-            </div>
-            <span className="font-bold text-xl text-foreground" style={{ fontFamily: 'var(--font-display)' }}>
-              SPIN & LEARN
-            </span>
-          </div>
+          <a href="#" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+            <img src="/images/logo.png" alt="Spin & Learn Foundation" className="h-12" />
+          </a>
           <div className="hidden md:flex items-center gap-8">
             <a href="#about" className="text-foreground hover:text-primary transition-colors font-medium">About</a>
             <a href="#programs" className="text-foreground hover:text-primary transition-colors font-medium">Programs</a>
             <a href="#impact" className="text-foreground hover:text-primary transition-colors font-medium">Impact</a>
             <a href="#support" className="text-foreground hover:text-primary transition-colors font-medium">Support Us</a>
             <a href="#contact">
-              <Button className="bg-accent hover:bg-accent/90 text-accent-foreground">
+              <Button className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
                 Contact
               </Button>
             </a>
@@ -64,7 +59,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
                 size="lg" 
-                className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8 group"
+                className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8 group font-semibold"
               >
                 Learn About Our Programs
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
@@ -72,7 +67,7 @@ export default function Home() {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="bg-background/10 backdrop-blur-sm border-primary-foreground text-primary-foreground hover:bg-background/20 text-lg px-8"
+                className="bg-primary/10 backdrop-blur-sm border-primary text-primary hover:bg-primary/20 text-lg px-8 font-semibold"
               >
                 Support Our Mission
               </Button>
@@ -343,14 +338,14 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 size="lg" 
-                className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8"
+                className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8 font-semibold"
               >
                 Make a Donation
               </Button>
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="text-lg px-8"
+                className="text-lg px-8 font-semibold"
               >
                 Partner With Us
               </Button>
@@ -401,9 +396,9 @@ export default function Home() {
                 <p className="text-muted-foreground mb-4">
                   We welcome inquiries from foundations, city agencies, and institutional funders. Our programs are designed to meet community needs while delivering measurable impact.
                 </p>
-                <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                  Request Grant Information
-                </Button>
+            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold">
+                Request Grant Information
+              </Button>
               </div>
             </div>
           </div>
@@ -415,15 +410,8 @@ export default function Home() {
         <div className="container">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-10 h-10 bg-primary-foreground/20 rounded-full flex items-center justify-center">
-                  <span className="text-primary-foreground font-bold text-lg">S&L</span>
-                </div>
-                <span className="font-bold text-xl" style={{ fontFamily: 'var(--font-display)' }}>
-                  SPIN & LEARN
-                </span>
-              </div>
-              <p className="text-primary-foreground/80">
+              <img src="/images/logo.png" alt="Spin & Learn Foundation" className="h-10" />
+              <p className="text-primary-foreground/80 mt-4">
                 Building community through table tennis since 2020.
               </p>
             </div>

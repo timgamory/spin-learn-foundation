@@ -43,40 +43,40 @@
 }
 
 :root {
-  /* Community Kinetic Design - Forest Green Primary, Coral Accent */
-  --primary: oklch(0.32 0.08 155); /* Deep forest green #1B4332 */
-  --primary-foreground: oklch(0.98 0.01 90); /* Warm cream */
-  --sidebar-primary: oklch(0.32 0.08 155);
-  --sidebar-primary-foreground: oklch(0.98 0.01 90);
-  --chart-1: oklch(0.32 0.08 155);
-  --chart-2: oklch(0.72 0.15 25); /* Vibrant coral */
-  --chart-3: oklch(0.5 0.1 155);
-  --chart-4: oklch(0.4 0.09 155);
-  --chart-5: oklch(0.25 0.07 155);
+  /* Spin & Learn Foundation Brand Colors */
+  --primary: #015486; /* Deep blue */
+  --primary-foreground: #fafcfd; /* Light background */
+  --sidebar-primary: #015486;
+  --sidebar-primary-foreground: #fafcfd;
+  --chart-1: #015486;
+  --chart-2: #ec2024; /* Red accent */
+  --chart-3: #ffe928; /* Yellow accent */
+  --chart-4: #0a3a5c;
+  --chart-5: #003d5c;
   --radius: 0.5rem;
-  --background: oklch(0.98 0.01 90); /* Warm cream #F8F4E8 */
-  --foreground: oklch(0.25 0.02 155); /* Dark forest for text */
-  --card: oklch(1 0 0); /* Pure white for cards */
-  --card-foreground: oklch(0.25 0.02 155);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.25 0.02 155);
-  --secondary: oklch(0.95 0.01 90); /* Lighter cream */
-  --secondary-foreground: oklch(0.3 0.05 155);
-  --muted: oklch(0.92 0.01 90);
-  --muted-foreground: oklch(0.5 0.05 155);
-  --accent: oklch(0.72 0.15 25); /* Vibrant coral #FF6B6B */
-  --accent-foreground: oklch(1 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.88 0.01 90);
-  --input: oklch(0.88 0.01 90);
-  --ring: oklch(0.32 0.08 155);
-  --sidebar: oklch(0.98 0.01 90);
-  --sidebar-foreground: oklch(0.25 0.02 155);
-  --sidebar-accent: oklch(0.95 0.01 90);
-  --sidebar-accent-foreground: oklch(0.3 0.05 155);
-  --sidebar-border: oklch(0.88 0.01 90);
-  --sidebar-ring: oklch(0.32 0.08 155);
+  --background: #fafcfd; /* Light background */
+  --foreground: #015486; /* Deep blue for text */
+  --card: #ffffff; /* White for cards */
+  --card-foreground: #015486;
+  --popover: #ffffff;
+  --popover-foreground: #015486;
+  --secondary: #f5f7fa; /* Light gray-blue */
+  --secondary-foreground: #015486;
+  --muted: #e8eef5;
+  --muted-foreground: #5a7a99;
+  --accent: #ffe928; /* Bright yellow */
+  --accent-foreground: #015486;
+  --destructive: #ec2024; /* Red */
+  --destructive-foreground: #ffffff;
+  --border: #d4dce8;
+  --input: #e8eef5;
+  --ring: #015486;
+  --sidebar: #fafcfd;
+  --sidebar-foreground: #015486;
+  --sidebar-accent: #f5f7fa;
+  --sidebar-accent-foreground: #015486;
+  --sidebar-border: #d4dce8;
+  --sidebar-ring: #015486;
   
   /* Custom font families */
   --font-display: 'Archivo Black', sans-serif;
