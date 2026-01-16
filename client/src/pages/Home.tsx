@@ -375,13 +375,7 @@ export default function Home() {
                       <div className="text-muted-foreground">info@spinandlearn.org</div>
                     </div>
                   </div>
-                  <div className="flex items-start gap-3">
-                    <Phone className="w-5 h-5 text-primary mt-1" />
-                    <div>
-                      <div className="font-medium text-foreground">Phone</div>
-                      <div className="text-muted-foreground">(718) 555-SPIN</div>
-                    </div>
-                  </div>
+
                   <div className="flex items-start gap-3">
                     <MapPin className="w-5 h-5 text-primary mt-1" />
                     <div>
@@ -426,8 +420,7 @@ export default function Home() {
             </div>
             <div>
               <h4 className="font-bold mb-4">Connect</h4>
-              <p className="text-primary-foreground/80 mb-2">info@spinandlearn.org</p>
-              <p className="text-primary-foreground/80">(718) 555-SPIN</p>
+              <p className="text-primary-foreground/80">info@spinandlearn.org</p>
             </div>
           </div>
           <div className="border-t border-primary-foreground/20 pt-8 text-center text-primary-foreground/60">
