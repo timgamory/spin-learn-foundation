@@ -410,7 +410,7 @@ export default function Home() {
         <div className="container">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
-              <img src="/images/logo.png" alt="Spin & Learn Foundation" className="h-10" />
+              <img src="/images/logo-dark.png" alt="Spin & Learn Foundation" className="h-10" />
               <p className="text-primary-foreground/80 mt-4">
                 Building community through table tennis since 2020.
               </p>
