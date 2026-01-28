@@ -75,10 +75,7 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Trajectory line decoration */}
-        <div className="absolute bottom-0 right-0 w-1/3 h-1/3 opacity-20">
-          <img src="/images/abstract-motion.png" alt="" className="w-full h-full object-contain" />
-        </div>
+
       </section>
 
       {/* Mission Statement - Clean section */}
