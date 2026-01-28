@@ -38,7 +38,7 @@ export default function Home() {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: 'url(/images/hero-table-tennis.png)',
+            backgroundImage: 'url(/images/hero-community.png)',
             clipPath: 'polygon(0 0, 100% 0, 100% 85%, 0 100%)',
           }}
         >
