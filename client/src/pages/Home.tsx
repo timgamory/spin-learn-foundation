@@ -54,7 +54,7 @@ export default function Home() {
               Building Community Through Table Tennis
             </h1>
             <p className="text-xl md:text-2xl text-primary-foreground/95 mb-8 leading-relaxed">
-              Spin & Learn Foundation expands access to professional table tennis programs across all ages—from youth development to senior wellness—creating a vibrant, intergenerational table tennis community in the Bronx and beyond.
+              Spin & Learn Foundation expands access to table tennis programs across all ages—from youth development to senior wellness—creating a vibrant, intergenerational table tennis community in the Bronx and beyond.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
