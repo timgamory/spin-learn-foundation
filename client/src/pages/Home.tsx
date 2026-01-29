@@ -51,7 +51,7 @@ export default function Home() {
               className="text-5xl md:text-7xl font-black text-primary-foreground mb-6 leading-tight"
               style={{ fontFamily: 'var(--font-display)' }}
             >
-              Bringing World-Class Table Tennis to the Bronx
+              Bringing World-Class Table Tennis to The Bronx
             </h1>
             <p className="text-xl md:text-2xl text-primary-foreground/95 mb-8 leading-relaxed">
               The Bronx is the only NYC borough without a single table tennis facility. Spin & Learn is changing that by creating programs for youth, adults, and seniors that build community, improve health, and make the sport accessible to everyone.
@@ -316,7 +316,7 @@ export default function Home() {
                 style={{ clipPath: 'polygon(0 8%, 100% 0, 100% 100%, 0 100%)' }}
               >
                 <img 
-                  src="/images/community-event.png" 
+                  src="/images/adult-programs.jpg" 
                   alt="Adult table tennis program" 
                   className="w-full h-full object-cover"
                 />
