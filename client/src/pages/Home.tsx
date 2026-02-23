@@ -304,7 +304,7 @@ export default function Home() {
               Join Us
             </h2>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              Every contribution helps us bring table tennis to more people across the Bronx. Your support provides equipment for schools and community centers, scholarships for youth who can't afford program fees, training for new coaches, and free community events.
+              The Bronx deserves better access to sports, wellness, and community. Your support helps us make that a reality - one rally at a time
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
