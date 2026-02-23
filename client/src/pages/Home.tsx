@@ -15,30 +15,26 @@ export default function Home() {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
         <div className="container mx-auto flex items-center justify-between h-16">
-          <Link href="/">
-            <a className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-              <img src="/images/logo.png" alt="Spin & Learn Foundation" className="h-12" />
-            </a>
+          <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+            <img src="/images/logo.png" alt="Spin & Learn Foundation" className="h-12" />
           </Link>
           <div className="hidden md:flex items-center gap-8">
-            <Link href="/about">
-              <a className="text-foreground hover:text-primary transition-colors font-medium">About</a>
+            <Link href="/about" className="text-foreground hover:text-primary transition-colors font-medium">
+              About
             </Link>
-            <Link href="/#programs">
-              <a className="text-foreground hover:text-primary transition-colors font-medium">Programs</a>
+            <Link href="/#programs" className="text-foreground hover:text-primary transition-colors font-medium">
+              Programs
             </Link>
-            <Link href="/blog">
-              <a className="text-foreground hover:text-primary transition-colors font-medium">Blog</a>
+            <Link href="/blog" className="text-foreground hover:text-primary transition-colors font-medium">
+              Blog
             </Link>
-            <Link href="/support">
-              <a className="text-foreground hover:text-primary transition-colors font-medium">Support Us</a>
+            <Link href="/support" className="text-foreground hover:text-primary transition-colors font-medium">
+              Support Us
             </Link>
             <Link href="/#contact">
-              <a>
-                <Button className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
-                  Contact
-                </Button>
-              </a>
+              <Button className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
+                Contact
+              </Button>
             </Link>
           </div>
         </div>
