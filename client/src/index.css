@@ -44,39 +44,39 @@
 
 :root {
   /* Spin & Learn Foundation Brand Colors */
-  --primary: #015486; /* Deep blue */
+  --primary: #00548a; /* Primary Blue */
   --primary-foreground: #fafcfd; /* Light background */
-  --sidebar-primary: #015486;
+  --sidebar-primary: #00548a;
   --sidebar-primary-foreground: #fafcfd;
-  --chart-1: #015486;
-  --chart-2: #ec2024; /* Red accent */
-  --chart-3: #ffe928; /* Yellow accent */
-  --chart-4: #0a3a5c;
-  --chart-5: #003d5c;
+  --chart-1: #00548a;
+  --chart-2: #ed2025; /* Red */
+  --chart-3: #ffe929; /* Accent Yellow */
+  --chart-4: #00548a;
+  --chart-5: #00548a;
   --radius: 0.5rem;
   --background: #fafcfd; /* Light background */
-  --foreground: #015486; /* Deep blue for text */
+  --foreground: #00548a; /* Primary blue for text */
   --card: #ffffff; /* White for cards */
-  --card-foreground: #015486;
+  --card-foreground: #00548a;
   --popover: #ffffff;
-  --popover-foreground: #015486;
+  --popover-foreground: #00548a;
   --secondary: #f5f7fa; /* Light gray-blue */
-  --secondary-foreground: #015486;
+  --secondary-foreground: #00548a;
   --muted: #e8eef5;
   --muted-foreground: #5a7a99;
-  --accent: #ffe928; /* Bright yellow */
-  --accent-foreground: #015486;
-  --destructive: #ec2024; /* Red */
+  --accent: #ffe929; /* Accent Yellow */
+  --accent-foreground: #00548a;
+  --destructive: #ed2025; /* Red */
   --destructive-foreground: #ffffff;
   --border: #d4dce8;
   --input: #e8eef5;
-  --ring: #015486;
+  --ring: #00548a;
   --sidebar: #fafcfd;
-  --sidebar-foreground: #015486;
+  --sidebar-foreground: #00548a;
   --sidebar-accent: #f5f7fa;
-  --sidebar-accent-foreground: #015486;
+  --sidebar-accent-foreground: #00548a;
   --sidebar-border: #d4dce8;
-  --sidebar-ring: #015486;
+  --sidebar-ring: #00548a;
   
   /* Custom font families */
   --font-display: 'Archivo Black', sans-serif;

@@ -15,19 +15,31 @@ export default function Home() {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
         <div className="container mx-auto flex items-center justify-between h-16">
-          <a href="#" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-            <img src="/images/logo.png" alt="Spin & Learn Foundation" className="h-12" />
-          </a>
-          <div className="hidden md:flex items-center gap-8">
-            <a href="#about" className="text-foreground hover:text-primary transition-colors font-medium">About</a>
-            <a href="#programs" className="text-foreground hover:text-primary transition-colors font-medium">Programs</a>
-            <a href="#impact" className="text-foreground hover:text-primary transition-colors font-medium">Impact</a>
-            <a href="#support" className="text-foreground hover:text-primary transition-colors font-medium">Support Us</a>
-            <a href="#contact">
-              <Button className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
-                Contact
-              </Button>
+          <Link href="/">
+            <a className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+              <img src="/images/logo.png" alt="Spin & Learn Foundation" className="h-12" />
             </a>
+          </Link>
+          <div className="hidden md:flex items-center gap-8">
+            <Link href="/about">
+              <a className="text-foreground hover:text-primary transition-colors font-medium">About</a>
+            </Link>
+            <Link href="/#programs">
+              <a className="text-foreground hover:text-primary transition-colors font-medium">Programs</a>
+            </Link>
+            <Link href="/blog">
+              <a className="text-foreground hover:text-primary transition-colors font-medium">Blog</a>
+            </Link>
+            <Link href="/support">
+              <a className="text-foreground hover:text-primary transition-colors font-medium">Support Us</a>
+            </Link>
+            <Link href="/#contact">
+              <a>
+                <Button className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
+                  Contact
+                </Button>
+              </a>
+            </Link>
           </div>
         </div>
       </nav>
@@ -51,33 +63,41 @@ export default function Home() {
               className="text-5xl md:text-7xl font-black text-primary-foreground mb-6 leading-tight"
               style={{ fontFamily: 'var(--font-display)' }}
             >
-              Bringing World-Class Table Tennis to The Bronx
+              The Bronx Deserves World-Class Table Tennis
             </h1>
             <p className="text-xl md:text-2xl text-primary-foreground/95 mb-8 leading-relaxed">
-              The Bronx is the only NYC borough without a single table tennis facility. Spin & Learn is changing that by creating programs for youth, adults, and seniors that build community, improve health, and make the sport accessible to everyone.
+              We train youth into confident athletes, support adults in building new skills, and help seniors stay active and connected. Through table tennis, we're building a healthier, more connected Bronx.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
-                size="lg" 
-                className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8 group font-semibold"
-              >
-                Explore Our Programs
-                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="bg-primary/10 backdrop-blur-sm border-primary text-primary hover:bg-primary/20 text-lg px-8 font-semibold"
-              >
-                Support Our Mission
-              </Button>
+              <Link href="/support">
+                <a>
+                  <Button 
+                    size="lg" 
+                    className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8 group font-semibold"
+                  >
+                    Partner With Us
+                    <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </a>
+              </Link>
+              <Link href="/support">
+                <a>
+                  <Button 
+                    size="lg" 
+                    variant="outline" 
+                    className="bg-primary/10 backdrop-blur-sm border-primary-foreground text-primary-foreground hover:bg-primary/20 text-lg px-8 font-semibold"
+                  >
+                    Make a Donation
+                  </Button>
+                </a>
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
       {/* Mission Statement - Clean section */}
-      <section id="about" className="py-20 bg-card">
+      <section className="py-20 bg-card">
         <div className="container">
           <div className="max-w-4xl mx-auto text-center">
             <h2 
@@ -236,7 +256,7 @@ export default function Home() {
                 style={{ clipPath: 'polygon(0 0, 100% 0, 100% 92%, 0 100%)' }}
               >
                 <img 
-                  src="/images/youth-program.png" 
+                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663065691612/AJJTidXpDreSKbhy.png" 
                   alt="Youth table tennis training" 
                   className="w-full h-full object-cover"
                 />
@@ -330,7 +350,7 @@ export default function Home() {
                 style={{ clipPath: 'polygon(0 0, 100% 0, 100% 92%, 0 100%)' }}
               >
                 <img 
-                  src="/images/senior-wellness.png" 
+                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663065691612/IOVJNekTOZCzQuYl.png" 
                   alt="Senior wellness program" 
                   className="w-full h-full object-cover"
                 />
@@ -404,7 +424,7 @@ export default function Home() {
                 style={{ clipPath: 'polygon(0 8%, 100% 0, 100% 100%, 0 100%)' }}
               >
                 <img 
-                  src="/images/community-event.png" 
+                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663065691612/CVXwgjKFrWYnxTuf.png" 
                   alt="Community table tennis event" 
                   className="w-full h-full object-cover"
                 />
