@@ -8,8 +8,17 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowRight, Users, Heart, Trophy, Target, Mail, Brain, Zap, MapPin } from "lucide-react";
 import { Link } from "wouter";
+import { useState, useEffect } from "react";
+import PhotoCarousel from "@/components/PhotoCarousel";
 
 export default function Home() {
+  const carouselImages = [
+    '/images/youth-program.png',
+    '/images/senior-wellness.png',
+    '/images/community-event.png',
+    '/images/hero-table-tennis.png'
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation */}
@@ -159,6 +168,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Photo Carousel Section */}
+      <PhotoCarousel images={carouselImages} autoScrollInterval={4000} />
 
       {/* Why We Matter Section - Reframed around benefits */}
       <section className="py-20 bg-card">
