@@ -14,6 +14,11 @@
 
 ## In Progress / Next Steps
 - [x] Revise card layout and design for "Why Your Support Matters" section - tighter grid, stronger borders, cleaner design
+- [x] Create new Programs page with all program content
+- [x] Add Programs route to App.tsx
+- [x] Add Home link to navigation bar
+- [x] Increase font sizes for six impact cards (text-2xl titles, text-base descriptions)
+- [x] Add "Explore Our Programs" CTA button below cards with arrow icon
 - [ ] Add admin navigation link to main website (visible only to admins)
 - [ ] Create contact form with email integration
 - [ ] Add testimonials section with rotating quotes

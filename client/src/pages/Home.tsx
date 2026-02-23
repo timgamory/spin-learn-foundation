@@ -38,10 +38,13 @@ export default function Home() {
             <img src="/images/logo.png" alt="Spin & Learn Foundation" className="h-12" />
           </Link>
           <div className="hidden md:flex items-center gap-8">
+            <Link href="/" className="text-foreground hover:text-primary transition-colors font-medium">
+              Home
+            </Link>
             <Link href="/about" className="text-foreground hover:text-primary transition-colors font-medium">
               About
             </Link>
-            <Link href="/#programs" className="text-foreground hover:text-primary transition-colors font-medium">
+            <Link href="/programs" className="text-foreground hover:text-primary transition-colors font-medium">
               Programs
             </Link>
             <Link href="/blog" className="text-foreground hover:text-primary transition-colors font-medium">
@@ -235,10 +238,20 @@ export default function Home() {
                 <div className="w-12 h-12 rounded-full bg-primary/15 flex items-center justify-center mb-4">
                   <item.icon className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="text-lg font-bold text-foreground mb-3">{item.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
+                        <h3 className="text-2xl font-bold text-foreground mb-3">{item.title}</h3>
+                <p className="text-base text-muted-foreground leading-relaxed">{item.description}</p>
               </Card>
             ))}
+          </div>
+          
+          {/* CTA Button */}
+          <div className="mt-12 text-center">
+            <Link href="/programs">
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8">
+                Explore Our Programs
+                <ArrowRight className="ml-2" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
