@@ -4,8 +4,38 @@ import { Link } from "wouter";
 export default function Programs() {
   return (
     <div className="min-h-screen bg-background">
+      {/* Navigation */}
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+        <div className="container mx-auto flex items-center justify-between h-16">
+          <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+            <img src="/images/logo.png" alt="Spin & Learn Foundation" className="h-12" />
+          </Link>
+          <div className="hidden md:flex items-center gap-8">
+            <Link href="/" className="text-foreground hover:text-[#015486] transition-colors font-medium">
+              Home
+            </Link>
+            <Link href="/about" className="text-foreground hover:text-[#015486] transition-colors font-medium">
+              About
+            </Link>
+            <Link href="/programs" className="text-foreground hover:text-[#015486] transition-colors font-medium">
+              Programs
+            </Link>
+            <Link href="/blog" className="text-foreground hover:text-[#015486] transition-colors font-medium">
+              Blog
+            </Link>
+            <Link href="/support" className="text-foreground hover:text-[#015486] transition-colors font-medium">
+              Support Us
+            </Link>
+            <a href="/#contact">
+              <button className="bg-[#ffe929] hover:bg-[#ffe929]/90 text-[#015486] font-semibold px-6 py-2 rounded-md transition-colors">
+                Contact
+              </button>
+            </a>
+          </div>
+        </div>
+      </nav>
       {/* Hero Section */}
-      <section className="pt-24 pb-12 bg-card">
+      <section className="pt-32 pb-12 bg-card">
         <div className="container">
           <div className="max-w-4xl mx-auto text-center">
             <h1 

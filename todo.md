@@ -21,6 +21,10 @@
 - [x] Add "Explore Our Programs" CTA button below cards with arrow icon
 - [x] Remove Programs section from landing page (moved to dedicated /programs page)
 - [x] Remove Yasiris Ortiz section from landing page (can be added to dedicated About page later)
+- [x] Add hover color to navigation links matching design palette (deep blue #015486)
+- [x] Fix Home link to navigate to landing page (same as logo click)
+- [x] Add navigation bar to Programs page
+- [x] Remove "NYS MWBE Certified" text from footer
 - [ ] Add admin navigation link to main website (visible only to admins)
 - [ ] Create contact form with email integration
 - [ ] Add testimonials section with rotating quotes
