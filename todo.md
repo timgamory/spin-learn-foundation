@@ -9,6 +9,8 @@
 - [x] Update Home page to load carousel images from database with fallback to static images
 - [x] Write and pass tests for carousel image database functions (6 tests passing)
 - [x] Add Admin route to App.tsx
+- [x] Reframe "Why We Matter" section to donor-focused messaging ("You are helping...")
+- [x] Update all six impact cards with donor perspective and improved titles
 
 ## In Progress / Next Steps
 - [ ] Add admin navigation link to main website (visible only to admins)

@@ -189,10 +189,10 @@ export default function Home() {
             className="text-4xl md:text-5xl font-black text-foreground mb-4 text-center"
             style={{ fontFamily: 'var(--font-display)' }}
           >
-            Why We Matter
+            Why Your Support Matters
           </h2>
           <p className="text-center text-muted-foreground mb-12 text-lg max-w-2xl mx-auto">
-            We're building the Bronx's table tennis community from the ground up, addressing real needs across generations.
+            Every contribution helps us build something the Bronx has never had. Here is what you are making possible.
           </p>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
@@ -200,32 +200,32 @@ export default function Home() {
               {
                 icon: MapPin,
                 title: "Filling a Gap",
-                description: "The Bronx has zero commercial table tennis facilities. We bring the sport directly to schools, community centers, and senior programs where people already gather."
+                description: "You are helping bring table tennis to the only NYC borough without a single facility. Your support puts the sport directly into schools and community centers where Bronx residents already gather."
               },
               {
                 icon: Zap,
                 title: "Affordable Access",
-                description: "While average youth sports cost families over $1,000 annually, table tennis requires minimal equipment. We remove financial barriers so everyone can play."
+                description: "You are helping remove financial barriers so everyone can play. We are working to make world-class table tennis accessible to every Bronx resident regardless of age or income."
               },
               {
                 icon: Brain,
-                title: "Brain Health Benefits",
-                description: "Research shows table tennis improves cognitive function, helps with ADHD symptoms in children, and supports brain health in seniors. It's exercise for the body and mind."
+                title: "Health & Brain Benefits",
+                description: "You are funding programs backed by science. Table tennis improves cognitive function, supports children with ADHD, protects brain health in seniors, and has one of the lowest injury rates of any sport."
               },
               {
                 icon: Users,
-                title: "Intergenerational Connection",
-                description: "Our programs bring together youth, adults, and seniors. Table tennis is one of the few sports where a 10-year-old can genuinely compete with a 70-year-old."
+                title: "Connecting Ages",
+                description: "You are creating one of the few spaces where a 10-year-old and a 70-year-old can compete as equals. Your support builds real relationships across generations."
               },
               {
                 icon: Trophy,
                 title: "World-Class Coaching",
-                description: "Our founder is a Caribbean champion and ITTF Level 3 certified coach. Participants learn from someone who has competed at the highest international levels."
+                description: "You are giving Bronx residents access to internationally certified coaching. Our founder is a Caribbean champion and ITTF Level 3 certified coach."
               },
               {
                 icon: Heart,
-                title: "Community Building",
-                description: "Beyond individual skill development, we host tournaments, open play sessions, and events that create lasting connections across neighborhoods."
+                title: "Community Hub",
+                description: "You are helping build the Bronx's first table tennis hub - a home for leagues, tournaments, and a growing community of players of all ages."
               }
             ].map((item, index) => (
               <Card 
