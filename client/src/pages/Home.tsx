@@ -73,7 +73,7 @@ export default function Home() {
                 <a>
                   <Button 
                     size="lg" 
-                    className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8 group font-semibold"
+                    className="bg-[#ffe929] hover:bg-[#ffe929]/90 text-[#00548a] text-lg px-8 group font-semibold"
                   >
                     Partner With Us
                     <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
@@ -84,8 +84,7 @@ export default function Home() {
                 <a>
                   <Button 
                     size="lg" 
-                    variant="outline" 
-                    className="bg-primary/10 backdrop-blur-sm border-primary-foreground text-primary-foreground hover:bg-primary/20 text-lg px-8 font-semibold"
+                    className="bg-[#ed2025] hover:bg-[#ed2025]/90 text-white text-lg px-8 font-semibold"
                   >
                     Make a Donation
                   </Button>
