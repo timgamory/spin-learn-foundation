@@ -139,7 +139,7 @@ export default function Home() {
           >
             Why the Bronx Needs Table Tennis
           </h2>
-          <p className="text-center text-muted-foreground mb-12 text-lg max-w-3xl mx-auto">
+          <p className="text-center text-muted-foreground mb-12 text-lg max-w-3xl mx-auto" style={{fontSize: '20px'}}>
             The Bronx is NYC's poorest borough, yet its residents -- youth, adults, and seniors -- deserve access to structured sports programs, real competition opportunities, and spaces that build community. Table tennis is low-impact, can be played year-round indoors, and has one of the lowest injury rates of any sport. Yet the Bronx remains the only NYC borough without a single table tennis facility.
           </p>
           
@@ -198,7 +198,7 @@ export default function Home() {
           >
             Why Your Support Matters
           </h2>
-          <p className="text-center text-muted-foreground mb-12 text-lg max-w-2xl mx-auto">
+          <p className="text-center text-muted-foreground mb-12 text-lg max-w-2xl mx-auto" style={{fontSize: '20px'}}>
             Every contribution helps us build something the Bronx has never had. Here is what you are making possible.
           </p>
           
@@ -252,7 +252,7 @@ export default function Home() {
           <div className="mt-12 text-center">
             <a href="/programs">
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8" asChild>
-                <span>
+                <span style={{fontSize: '18px'}}>
                   Explore Our Programs
                   <ArrowRight className="ml-2" />
                 </span>
@@ -316,7 +316,7 @@ export default function Home() {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="text-lg px-8 font-semibold"
+                className="text-lg px-8 font-semibold" style={{backgroundColor: '#ffffff'}}
               >
                 Partner With Us
               </Button>
