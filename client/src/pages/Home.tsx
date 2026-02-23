@@ -220,7 +220,7 @@ export default function Home() {
               {
                 icon: Trophy,
                 title: "World-Class Coaching",
-                description: "You are giving Bronx residents access to internationally certified coaching. Our founder is a Caribbean champion and ITTF Level 3 certified coach."
+                description: "You are giving residents access to a coaching team with real competitive experience, led by a Caribbean champion and ITTF Level 3 certified coach."
               },
               {
                 icon: Heart,
