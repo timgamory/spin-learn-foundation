@@ -118,7 +118,7 @@ export default function Home() {
             Why the Bronx Needs Table Tennis
           </h2>
           <p className="text-center text-muted-foreground mb-12 text-lg max-w-3xl mx-auto">
-            The Bronx faces a recreation gap that affects residents of all ages. Table tennis costs under $20 to start, can be played year-round indoors, and is low-impact but highly engaging. Yet the Bronx remains the only NYC borough without a single commercial table tennis facility.
+            The Bronx is NYC's poorest borough, yet its residents -- youth, adults, and seniors -- deserve access to structured sports programs, real competition opportunities, and spaces that build community. Table tennis is low-impact, can be played year-round indoors, and has one of the lowest injury rates of any sport. Yet the Bronx remains the only NYC borough without a single table tennis facility.
           </p>
           
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
