@@ -53,11 +53,11 @@ export default function Home() {
             <Link href="/support" className="text-foreground hover:text-primary transition-colors font-medium">
               Support Us
             </Link>
-            <Link href="/#contact">
-              <Button className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
-                Contact
+            <a href="/#contact">
+              <Button className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold" asChild>
+                <span>Contact</span>
               </Button>
-            </Link>
+            </a>
           </div>
         </div>
       </nav>
@@ -87,23 +87,27 @@ export default function Home() {
               The Bronx is the only NYC borough without a single table tennis facility. Spin & Learn Foundation is changing that by creating programs that make world-class table tennis accessible to every Bronx resident, regardless of age or income.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/support">
+              <a href="/support">
                 <Button 
                   size="lg" 
                   className="bg-[#ffe929] hover:bg-[#ffe929]/90 text-[#00548a] text-lg px-8 group font-semibold"
+                  asChild
                 >
-                  Partner With Us
-                  <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+                  <span>
+                    Partner With Us
+                    <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+                  </span>
                 </Button>
-              </Link>
-              <Link href="/support">
+              </a>
+              <a href="/support">
                 <Button 
                   size="lg" 
                   className="bg-[#ed2025] hover:bg-[#ed2025]/90 text-white text-lg px-8 font-semibold"
+                  asChild
                 >
-                  Make a Donation
+                  <span>Make a Donation</span>
                 </Button>
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -246,12 +250,14 @@ export default function Home() {
           
           {/* CTA Button */}
           <div className="mt-12 text-center">
-            <Link href="/programs">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8">
-                Explore Our Programs
-                <ArrowRight className="ml-2" />
+            <a href="/programs">
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8" asChild>
+                <span>
+                  Explore Our Programs
+                  <ArrowRight className="ml-2" />
+                </span>
               </Button>
-            </Link>
+            </a>
           </div>
         </div>
       </section>
