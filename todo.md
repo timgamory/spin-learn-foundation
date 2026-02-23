@@ -13,6 +13,7 @@
 - [x] Update all six impact cards with donor perspective and improved titles
 
 ## In Progress / Next Steps
+- [x] Revise card layout and design for "Why Your Support Matters" section - tighter grid, stronger borders, cleaner design
 - [ ] Add admin navigation link to main website (visible only to admins)
 - [ ] Create contact form with email integration
 - [ ] Add testimonials section with rotating quotes

@@ -195,7 +195,7 @@ export default function Home() {
             Every contribution helps us build something the Bronx has never had. Here is what you are making possible.
           </p>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3 max-w-6xl mx-auto">
             {[
               {
                 icon: MapPin,
@@ -230,18 +230,13 @@ export default function Home() {
             ].map((item, index) => (
               <Card 
                 key={index}
-                className="p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-2 border-border bg-background"
-                style={{
-                  clipPath: index % 2 === 0 
-                    ? 'polygon(0 0, 100% 0, 100% 95%, 0 100%)' 
-                    : 'polygon(0 5%, 100% 0, 100% 100%, 0 100%)'
-                }}
+                className="p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-2 border-primary/30 bg-background rounded-lg"
               >
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                <div className="w-12 h-12 rounded-full bg-primary/15 flex items-center justify-center mb-4">
                   <item.icon className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-2">{item.title}</h3>
-                <p className="text-muted-foreground">{item.description}</p>
+                <h3 className="text-lg font-bold text-foreground mb-3">{item.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
               </Card>
             ))}
           </div>
