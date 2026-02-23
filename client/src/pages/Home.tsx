@@ -10,14 +10,24 @@ import { ArrowRight, Users, Heart, Trophy, Target, Mail, Brain, Zap, MapPin } fr
 import { Link } from "wouter";
 import { useState, useEffect } from "react";
 import PhotoCarousel from "@/components/PhotoCarousel";
+import { useAuth } from "@/_core/hooks/useAuth";
+import { trpc } from "@/lib/trpc";
 
 export default function Home() {
-  const carouselImages = [
-    '/images/youth-program.png',
-    '/images/senior-wellness.png',
-    '/images/community-event.png',
-    '/images/hero-table-tennis.png'
-  ];
+  // The userAuth hooks provides authentication state
+  // To implement login/logout functionality, simply call logout() or redirect to getLoginUrl()
+  let { user, loading, error, isAuthenticated, logout } = useAuth();
+
+  const { data: dbCarouselImages = [] } = trpc.carousel.list.useQuery();
+  
+  const carouselImages = dbCarouselImages.length > 0
+    ? dbCarouselImages.map(img => img.imageUrl)
+    : [
+        '/images/hero-community.png',
+        '/images/adult-programs.jpg',
+        '/images/hero-community.png',
+        '/images/adult-programs.jpg'
+      ];
 
   return (
     <div className="min-h-screen bg-background">
