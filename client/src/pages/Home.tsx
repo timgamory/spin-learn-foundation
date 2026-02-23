@@ -70,25 +70,21 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/support">
-                <a>
-                  <Button 
-                    size="lg" 
-                    className="bg-[#ffe929] hover:bg-[#ffe929]/90 text-[#00548a] text-lg px-8 group font-semibold"
-                  >
-                    Partner With Us
-                    <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-                  </Button>
-                </a>
+                <Button 
+                  size="lg" 
+                  className="bg-[#ffe929] hover:bg-[#ffe929]/90 text-[#00548a] text-lg px-8 group font-semibold"
+                >
+                  Partner With Us
+                  <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+                </Button>
               </Link>
               <Link href="/support">
-                <a>
-                  <Button 
-                    size="lg" 
-                    className="bg-[#ed2025] hover:bg-[#ed2025]/90 text-white text-lg px-8 font-semibold"
-                  >
-                    Make a Donation
-                  </Button>
-                </a>
+                <Button 
+                  size="lg" 
+                  className="bg-[#ed2025] hover:bg-[#ed2025]/90 text-white text-lg px-8 font-semibold"
+                >
+                  Make a Donation
+                </Button>
               </Link>
             </div>
           </div>
