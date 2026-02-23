@@ -19,6 +19,8 @@
 - [x] Add Home link to navigation bar
 - [x] Increase font sizes for six impact cards (text-2xl titles, text-base descriptions)
 - [x] Add "Explore Our Programs" CTA button below cards with arrow icon
+- [x] Remove Programs section from landing page (moved to dedicated /programs page)
+- [x] Remove Yasiris Ortiz section from landing page (can be added to dedicated About page later)
 - [ ] Add admin navigation link to main website (visible only to admins)
 - [ ] Create contact form with email integration
 - [ ] Add testimonials section with rotating quotes
