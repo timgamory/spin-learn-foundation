@@ -6,7 +6,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowRight, Mail, Building2, Heart } from "lucide-react";
-import { Link } from "wouter";
 
 export default function Support() {
   return (
@@ -14,31 +13,30 @@ export default function Support() {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
         <div className="container mx-auto flex items-center justify-between h-16">
-          <Link href="/">
-            <a className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-              <img src="/images/logo.png" alt="Spin & Learn Foundation" className="h-12" />
-            </a>
-          </Link>
+          <a href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+            <img src="/images/logo.png" alt="Spin & Learn Foundation" className="h-12" />
+          </a>
           <div className="hidden md:flex items-center gap-8">
-            <Link href="/about">
-              <a className="text-foreground hover:text-primary transition-colors font-medium">About</a>
-            </Link>
-            <Link href="/#programs">
-              <a className="text-foreground hover:text-primary transition-colors font-medium">Programs</a>
-            </Link>
-            <Link href="/blog">
-              <a className="text-foreground hover:text-primary transition-colors font-medium">Blog</a>
-            </Link>
-            <Link href="/support">
-              <a className="text-foreground hover:text-primary transition-colors font-medium">Support Us</a>
-            </Link>
-            <Link href="/#contact">
-              <a>
-                <Button className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
-                  Contact
-                </Button>
-              </a>
-            </Link>
+            <a href="/" className="text-foreground hover:text-primary transition-colors font-medium">
+              Home
+            </a>
+            <a href="/about" className="text-foreground hover:text-primary transition-colors font-medium">
+              About
+            </a>
+            <a href="/programs" className="text-foreground hover:text-primary transition-colors font-medium">
+              Programs
+            </a>
+            <a href="/blog" className="text-foreground hover:text-primary transition-colors font-medium">
+              Blog
+            </a>
+            <a href="/support" className="text-foreground hover:text-primary transition-colors font-medium">
+              Support Us
+            </a>
+            <a href="/contact">
+              <Button className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
+                Contact
+              </Button>
+            </a>
           </div>
         </div>
       </nav>
@@ -327,17 +325,17 @@ export default function Support() {
             <div>
               <h4 className="font-bold mb-4">Quick Links</h4>
               <ul className="space-y-2 text-sm opacity-80">
-                <li><Link href="/"><a className="hover:opacity-100 transition-opacity">Home</a></Link></li>
-                <li><Link href="/about"><a className="hover:opacity-100 transition-opacity">About</a></Link></li>
-                <li><Link href="/#programs"><a className="hover:opacity-100 transition-opacity">Programs</a></Link></li>
+                <li><a href="/" className="hover:opacity-100 transition-opacity">Home</a></li>
+                <li><a href="/about" className="hover:opacity-100 transition-opacity">About</a></li>
+                <li><a href="/programs" className="hover:opacity-100 transition-opacity">Programs</a></li>
               </ul>
             </div>
             <div>
               <h4 className="font-bold mb-4">Get Involved</h4>
               <ul className="space-y-2 text-sm opacity-80">
-                <li><Link href="/support"><a className="hover:opacity-100 transition-opacity">Support Us</a></Link></li>
-                <li><Link href="/#contact"><a className="hover:opacity-100 transition-opacity">Contact</a></Link></li>
-                <li><Link href="/blog"><a className="hover:opacity-100 transition-opacity">Blog</a></Link></li>
+                <li><a href="/support" className="hover:opacity-100 transition-opacity">Support Us</a></li>
+                <li><a href="/contact" className="hover:opacity-100 transition-opacity">Contact</a></li>
+                <li><a href="/blog" className="hover:opacity-100 transition-opacity">Blog</a></li>
               </ul>
             </div>
             <div>

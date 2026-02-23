@@ -9,6 +9,7 @@ import About from "./pages/About";
 import Programs from "./pages/Programs";
 import Blog from "./pages/Blog";
 import Support from "./pages/Support";
+import Contact from "./pages/Contact";
 import Admin from "./pages/Admin";
 
 function Router() {
@@ -20,6 +21,7 @@ function Router() {
       <Route path={"/programs"} component={Programs} />
       <Route path={"/blog"} component={Blog} />
       <Route path={"/support"} component={Support} />
+      <Route path={"/contact"} component={Contact} />
       <Route path={"/admin"} component={Admin} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
