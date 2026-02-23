@@ -102,7 +102,7 @@ export default function Home() {
               Our Mission
             </h2>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              We train youth into confident athletes, support adults in building new skills, and help seniors stay active and connected. Through table tennis, we're building a healthier, more connected Bronx.
+              At Spin & Learn Foundation, our mission is to provide programs for economically disadvantaged individuals across diverse communities, ensuring access to enrichment opportunities through table tennis that promote physical and mental wellness, build personal resilience, and develop leadership skills for lifelong success
             </p>
           </div>
         </div>
