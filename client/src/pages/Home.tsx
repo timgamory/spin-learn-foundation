@@ -126,9 +126,9 @@ export default function Home() {
               {
                 title: "For Youth",
                 points: [
-                  "41.5% of Bronx children live in poverty",
-                  "Average youth sports costs exceed $1,000/year",
-                  "High rates of childhood asthma (17% vs. 11% citywide)"
+                  "Less than 34% of low-income youth play sports",
+                  "Nearly 28% of Bronx residents live in poverty",
+                  "Youth need structured training and competition"
                 ]
               },
               {
