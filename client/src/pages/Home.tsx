@@ -250,8 +250,8 @@ export default function Home() {
           
           {/* CTA Button */}
           <div className="mt-12 text-center">
-            <a href="/programs">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8" asChild>
+            <a href="/programs" className="inline-block">
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8">
                 <span style={{fontSize: '18px'}}>
                   Explore Our Programs
                   <ArrowRight className="ml-2" />
