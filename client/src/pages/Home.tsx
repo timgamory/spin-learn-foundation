@@ -66,7 +66,7 @@ export default function Home() {
               The Bronx Deserves World-Class Table Tennis
             </h1>
             <p className="text-xl md:text-2xl text-primary-foreground/95 mb-8 leading-relaxed">
-              We train youth into confident athletes, support adults in building new skills, and help seniors stay active and connected. Through table tennis, we're building a healthier, more connected Bronx.
+              The Bronx is the only NYC borough without a single table tennis facility. Spin & Learn Foundation is changing that by creating programs that make world-class table tennis accessible to every Bronx resident, regardless of age or income.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/support">
