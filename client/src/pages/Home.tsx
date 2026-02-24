@@ -263,31 +263,45 @@ export default function Home() {
       </section>
 
 
-      {/* Impact Stats - Bold numbers with motion */}
-      <section id="impact" className="py-20 bg-primary text-primary-foreground relative overflow-hidden">
+      {/* Our 2026 Goals Section */}
+      <section id="goals" className="py-20 bg-primary text-primary-foreground relative overflow-hidden">
         <div className="container relative z-10">
-          <h2 
-            className="text-4xl md:text-5xl font-black mb-16 text-center"
-            style={{ fontFamily: 'var(--font-display)' }}
-          >
-            Our Impact
-          </h2>
-          <div className="grid md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+          <div className="max-w-4xl mx-auto text-center mb-16">
+            <h2 
+              className="text-4xl md:text-5xl font-black mb-6 text-center"
+              style={{ fontFamily: 'var(--font-display)' }}
+            >
+              Our 2026 Goals
+            </h2>
+            <p className="text-xl text-primary-foreground/95 leading-relaxed">
+              We are just getting started. Here is what we are building toward this year.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {[
-              { number: "500+", label: "Youth Served Annually" },
-              { number: "150+", label: "Senior Participants" },
-              { number: "15+", label: "Community Locations" },
-              { number: "25+", label: "Trained Coaches" }
-            ].map((stat, index) => (
-              <div key={index} className="text-center">
-                <div 
-                  className="text-5xl md:text-6xl font-bold mb-2"
-                  style={{ fontFamily: 'var(--font-mono)' }}
-                >
-                  {stat.number}
+              {
+                icon: Target,
+                title: "Launch 5 Community Programs",
+                description: "Serve 150+ participants across youth, adult, and senior programs -- beginning with our first pilot program by June 2026."
+              },
+              {
+                icon: Trophy,
+                title: "First Citywide Tournament",
+                description: "Host Spin & Learn Foundation's first citywide table tennis tournament, bringing together players of all ages and skill levels."
+              },
+              {
+                icon: Zap,
+                title: "Weekly Training & League Play",
+                description: "Establish consistent weekly training and league play serving 30+ regular participants in the community."
+              }
+            ].map((goal, index) => (
+              <Card key={index} className="p-8 bg-primary/10 border-2 border-[#ffe929] text-primary-foreground hover:shadow-lg transition-all duration-300">
+                <div className="w-14 h-14 rounded-full bg-[#ffe929] flex items-center justify-center mb-6">
+                  <goal.icon className="w-7 h-7 text-[#00548a]" />
                 </div>
-                <div className="text-lg text-primary-foreground/90">{stat.label}</div>
-              </div>
+                <h3 className="text-2xl font-bold mb-4">{goal.title}</h3>
+                <p className="text-primary-foreground/90 leading-relaxed">{goal.description}</p>
+              </Card>
             ))}
           </div>
         </div>

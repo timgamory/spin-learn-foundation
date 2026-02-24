@@ -37,6 +37,7 @@
 - [x] Changed navigation hover effect from text color to yellow underline for cleaner look
 - [x] Added deep blue background (#00548a) and white text to navigation hover effect across all pages
 - [x] Remove dark blue background box from nav links and replace with simple thin underline (#00548a)
+- [x] Replace 'Our Impact' section with 'Our 2026 Goals' section with three goal cards
 - [ ] Add admin navigation link to main website (visible only to admins)
 - [ ] Create functional contact form with email integration
 - [ ] Add testimonials section with rotating quotes
