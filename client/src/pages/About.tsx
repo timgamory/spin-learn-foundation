@@ -18,19 +18,19 @@ export default function About() {
             <img src="/images/logo.png" alt="Spin & Learn Foundation" className="h-12" />
           </a>
           <div className="hidden md:flex items-center gap-8">
-            <a href="/" className="text-foreground hover:text-primary transition-colors font-medium">
+            <a href="/" className="text-foreground hover:text-[#ffe929] transition-colors font-medium">
               Home
             </a>
-            <a href="/about" className="text-foreground hover:text-primary transition-colors font-medium">
+            <a href="/about" className="text-foreground hover:text-[#ffe929] transition-colors font-medium">
               About
             </a>
-            <a href="/programs" className="text-foreground hover:text-primary transition-colors font-medium">
+            <a href="/programs" className="text-foreground hover:text-[#ffe929] transition-colors font-medium">
               Programs
             </a>
-            <a href="/blog" className="text-foreground hover:text-primary transition-colors font-medium">
+            <a href="/blog" className="text-foreground hover:text-[#ffe929] transition-colors font-medium">
               Blog
             </a>
-            <a href="/support" className="text-foreground hover:text-primary transition-colors font-medium">
+            <a href="/support" className="text-foreground hover:text-[#ffe929] transition-colors font-medium">
               Support Us
             </a>
             <a href="/contact">

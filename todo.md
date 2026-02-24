@@ -33,6 +33,7 @@
 - [x] Update App.tsx with all routes
 - [x] Fix all navigation links to use proper anchor tags
 - [x] Test all navigation links - all working correctly
+- [x] Update navigation hover colors to bright yellow (#ffe929) across all pages
 - [ ] Add admin navigation link to main website (visible only to admins)
 - [ ] Create functional contact form with email integration
 - [ ] Add testimonials section with rotating quotes
