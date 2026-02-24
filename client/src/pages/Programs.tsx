@@ -11,19 +11,19 @@ export default function Programs() {
             <img src="/images/logo.png" alt="Spin & Learn Foundation" className="h-12" />
           </Link>
           <div className="hidden md:flex items-center gap-8">
-            <Link href="/" className="text-foreground hover:border-b-2 hover:border-[#ffe929] hover:bg-[#00548a] hover:text-white px-3 py-2 rounded transition-colors font-medium">
+            <Link href="/" className="text-foreground hover:border-b-2 hover:border-[#00548a] transition-colors font-medium">
               Home
             </Link>
-            <Link href="/about" className="text-foreground hover:border-b-2 hover:border-[#ffe929] hover:bg-[#00548a] hover:text-white px-3 py-2 rounded transition-colors font-medium">
+            <Link href="/about" className="text-foreground hover:border-b-2 hover:border-[#00548a] transition-colors font-medium">
               About
             </Link>
-            <Link href="/programs" className="text-foreground hover:border-b-2 hover:border-[#ffe929] hover:bg-[#00548a] hover:text-white px-3 py-2 rounded transition-colors font-medium">
+            <Link href="/programs" className="text-foreground hover:border-b-2 hover:border-[#00548a] transition-colors font-medium">
               Programs
             </Link>
-            <Link href="/blog" className="text-foreground hover:border-b-2 hover:border-[#ffe929] hover:bg-[#00548a] hover:text-white px-3 py-2 rounded transition-colors font-medium">
+            <Link href="/blog" className="text-foreground hover:border-b-2 hover:border-[#00548a] transition-colors font-medium">
               Blog
             </Link>
-            <Link href="/support" className="text-foreground hover:border-b-2 hover:border-[#ffe929] hover:bg-[#00548a] hover:text-white px-3 py-2 rounded transition-colors font-medium">
+            <Link href="/support" className="text-foreground hover:border-b-2 hover:border-[#00548a] transition-colors font-medium">
               Support Us
             </Link>
             <a href="/#contact">
