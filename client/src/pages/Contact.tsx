@@ -43,19 +43,19 @@ export default function Contact() {
             <img src="/images/logo.png" alt="Spin & Learn Foundation" className="h-12" />
           </a>
           <div className="hidden md:flex items-center gap-8">
-            <a href="/" className="text-foreground hover:text-[#ffe929] transition-colors font-medium">
+            <a href="/" className="text-foreground hover:border-b-2 hover:border-[#ffe929] transition-colors font-medium">
               Home
             </a>
-            <a href="/about" className="text-foreground hover:text-[#ffe929] transition-colors font-medium">
+            <a href="/about" className="text-foreground hover:border-b-2 hover:border-[#ffe929] transition-colors font-medium">
               About
             </a>
-            <a href="/programs" className="text-foreground hover:text-[#ffe929] transition-colors font-medium">
+            <a href="/programs" className="text-foreground hover:border-b-2 hover:border-[#ffe929] transition-colors font-medium">
               Programs
             </a>
-            <a href="/blog" className="text-foreground hover:text-[#ffe929] transition-colors font-medium">
+            <a href="/blog" className="text-foreground hover:border-b-2 hover:border-[#ffe929] transition-colors font-medium">
               Blog
             </a>
-            <a href="/support" className="text-foreground hover:text-[#ffe929] transition-colors font-medium">
+            <a href="/support" className="text-foreground hover:border-b-2 hover:border-[#ffe929] transition-colors font-medium">
               Support Us
             </a>
             <a href="/contact">
@@ -105,7 +105,7 @@ export default function Contact() {
               </div>
               <h3 className="text-xl font-bold text-foreground mb-2">Email</h3>
               <p className="text-muted-foreground mb-4">info@spinandlearn.com</p>
-              <a href="mailto:info@spinandlearn.com" className="text-primary hover:text-[#ffe929]/80 transition-colors font-medium">
+              <a href="mailto:info@spinandlearn.com" className="text-primary hover:border-b-2 hover:border-[#ffe929]/80 transition-colors font-medium">
                 Send us an email
               </a>
             </Card>
@@ -117,7 +117,7 @@ export default function Contact() {
               </div>
               <h3 className="text-xl font-bold text-foreground mb-2">Phone</h3>
               <p className="text-muted-foreground mb-4">(718) 555-0123</p>
-              <a href="tel:+17185550123" className="text-primary hover:text-[#ffe929]/80 transition-colors font-medium">
+              <a href="tel:+17185550123" className="text-primary hover:border-b-2 hover:border-[#ffe929]/80 transition-colors font-medium">
                 Call us
               </a>
             </Card>
@@ -129,7 +129,7 @@ export default function Contact() {
               </div>
               <h3 className="text-xl font-bold text-foreground mb-2">Location</h3>
               <p className="text-muted-foreground mb-4">The Bronx, New York</p>
-              <a href="#" className="text-primary hover:text-[#ffe929]/80 transition-colors font-medium">
+              <a href="#" className="text-primary hover:border-b-2 hover:border-[#ffe929]/80 transition-colors font-medium">
                 Visit us
               </a>
             </Card>
@@ -315,9 +315,9 @@ export default function Contact() {
             <div>
               <h4 className="font-bold mb-4">Quick Links</h4>
               <div className="space-y-2">
-                <a href="/" className="block text-primary-foreground/80 hover:text-[#ffe929]-foreground transition-colors">Home</a>
-                <a href="/about" className="block text-primary-foreground/80 hover:text-[#ffe929]-foreground transition-colors">About Us</a>
-                <a href="/programs" className="block text-primary-foreground/80 hover:text-[#ffe929]-foreground transition-colors">Programs</a>
+                <a href="/" className="block text-primary-foreground/80 hover:border-b-2 hover:border-[#ffe929]-foreground transition-colors">Home</a>
+                <a href="/about" className="block text-primary-foreground/80 hover:border-b-2 hover:border-[#ffe929]-foreground transition-colors">About Us</a>
+                <a href="/programs" className="block text-primary-foreground/80 hover:border-b-2 hover:border-[#ffe929]-foreground transition-colors">Programs</a>
               </div>
             </div>
             <div>

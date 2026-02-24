@@ -34,6 +34,7 @@
 - [x] Fix all navigation links to use proper anchor tags
 - [x] Test all navigation links - all working correctly
 - [x] Update navigation hover colors to bright yellow (#ffe929) across all pages
+- [x] Changed navigation hover effect from text color to yellow underline for cleaner look
 - [ ] Add admin navigation link to main website (visible only to admins)
 - [ ] Create functional contact form with email integration
 - [ ] Add testimonials section with rotating quotes
