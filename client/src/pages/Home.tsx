@@ -6,7 +6,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowRight, Users, Heart, Trophy, Target, Mail, Brain, Zap, MapPin } from "lucide-react";
+import { ArrowRight, Users, Heart, Trophy, Target, Mail, Brain, Zap, MapPin, Rocket, Repeat } from "lucide-react";
 import { Link } from "wouter";
 import { useState, useEffect } from "react";
 import { useAuth } from "@/_core/hooks/useAuth";
@@ -287,9 +287,9 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {[
               {
-                icon: Target,
+                icon: Rocket,
                 title: "Launch 5 Community Programs",
-                description: "Serve 150+ participants across youth, adult, and senior programs -- beginning with our first pilot program by June 2026."
+                description: "Serve 150+ participants across youth, adult, and senior programs, beginning with our first pilot program by June 2026."
               },
               {
                 icon: Trophy,
@@ -297,7 +297,7 @@ export default function Home() {
                 description: "Host Spin & Learn Foundation's first citywide table tennis tournament, bringing together players of all ages and skill levels."
               },
               {
-                icon: Zap,
+                icon: Repeat,
                 title: "Weekly Training & League Play",
                 description: "Establish consistent weekly training and league play serving 30+ regular participants in the community."
               }
@@ -332,19 +332,13 @@ export default function Home() {
                 size="lg" 
                 className="bg-[#ffe929] hover:bg-[#ffe929]/90 text-[#00548a] text-lg px-8 font-semibold"
               >
-                Make a Donation
-              </Button>
-              <Button 
-                size="lg" 
-                className="bg-[#ed2025] hover:bg-[#ed2025]/90 text-white text-lg px-8 font-semibold"
-              >
                 Partner With Us
               </Button>
               <Button 
                 size="lg" 
                 className="bg-[#ed2025] hover:bg-[#ed2025]/90 text-white text-lg px-8 font-semibold"
               >
-                Volunteer
+                Make a Donation
               </Button>
             </div>
           </div>
@@ -383,13 +377,20 @@ export default function Home() {
                 </div>
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-foreground mb-6">For Grantmakers</h3>
-                <p className="text-muted-foreground mb-4">
-                  We welcome inquiries from foundations, city agencies, and institutional funders. Our programs are designed to meet community needs while delivering measurable impact.
+                <h3 className="text-2xl font-bold text-foreground mb-6">Stay Connected</h3>
+                <p className="text-muted-foreground mb-6">
+                  Get updates on programs, events, and ways to get involved
                 </p>
-            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold">
-                Request Grant Information
-              </Button>
+                <div className="flex flex-col gap-3">
+                  <input 
+                    type="email" 
+                    placeholder="Enter your email" 
+                    className="px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                  />
+                  <Button className="bg-[#00548a] hover:bg-[#00548a]/90 text-white font-semibold">
+                    Subscribe
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
