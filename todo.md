@@ -57,6 +57,8 @@
 - [x] Add touch/swipe gestures for mobile
 - [x] Add accessibility labels and aria attributes
 - [x] Increase image slider size and make it more prominent on the page
+- [x] Update Our Story section with extended narrative (2016-2025 timeline)
+- [x] Add visual timeline with four milestones (2016, 2020, 2022, 2025)
 - [ ] MEDIUM: Standardize grid gaps throughout the page
 - [ ] MEDIUM: Remove inline style overrides and use Tailwind classes
 - [x] MEDIUM: Add success feedback to newsletter signup

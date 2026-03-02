@@ -62,27 +62,90 @@ export default function About() {
         <div className="container">
           <div className="max-w-4xl mx-auto">
             <h2 
-              className="text-4xl md:text-5xl font-black text-foreground mb-8"
+              className="text-4xl md:text-5xl font-black text-foreground mb-12"
               style={{ fontFamily: 'var(--font-display)' }}
             >
               Our Story
             </h2>
-            <div className="prose prose-lg max-w-none text-muted-foreground space-y-6">
+            <div className="prose prose-lg max-w-none text-muted-foreground space-y-6 mb-16">
               <p>
-                Spin & Learn Foundation was born from a simple observation and a big dream.
+                The roots of Spin & Learn Foundation go back further than 2025. Our founder Yasiris Ortiz began teaching table tennis to Bronx youth in after school programs in 2016. By 2020, that work grew into Spin & Learn, bringing structured table tennis programs to Bronx schools and expanding across New York City. But as the programs grew, so did the vision.
               </p>
               <p>
-                Since 2022, we have been working in Bronx schools through our table tennis programs, watching students light up at the table, develop focus and confidence, and discover a sport that could change their lives. But when the school day ended, there was nowhere for them to go. No club. No training center. No community space dedicated to the sport.
+                Students were thriving at the table, but when the school day ended there was nowhere for them to go. No club. No training center. No community space dedicated to the sport. And we kept coming back to one striking fact: the Bronx is the only NYC borough without a single table tennis facility.
               </p>
               <p>
-                That gap became impossible to ignore when we learned that the Bronx is the only NYC borough without a single table tennis facility.
-              </p>
-              <p>
-                In November 2025 we officially incorporated Spin & Learn Foundation, Inc. as a 501(c)(3) nonprofit to change that. Our dream is to create a permanent home for table tennis in the Bronx, a space where youth, adults, and seniors can train, compete, and connect year-round regardless of income or experience level.
+                That realization turned a dream into a mission. In November 2025 we officially incorporated Spin & Learn Foundation, Inc. as a 501(c)(3) nonprofit to create a permanent home for table tennis in the Bronx -- a space where youth, adults, and seniors can train, compete, and connect year-round regardless of income or experience level.
               </p>
               <p>
                 We are just getting started. But the need is real, the community is ready, and we are committed to building something lasting.
               </p>
+              <p>
+                Spin & Learn Foundation is led by Yasiris Ortiz, a 4-time Dominican national champion and ITTF Level 3 certified coach who moved to the Bronx in 2016 and saw firsthand what was missing. She founded this organization to give every Bronx resident the same opportunities that table tennis gave her.
+              </p>
+            </div>
+
+            {/* Timeline */}
+            <div className="max-w-4xl">
+              <div className="relative">
+                {/* Timeline line */}
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-primary"></div>
+                
+                {/* Timeline items */}
+                <div className="space-y-12">
+                  {/* 2016 */}
+                  <div className="relative">
+                    <div className="flex items-center">
+                      <div className="w-1/2 text-right pr-8">
+                        <p className="text-2xl font-bold" style={{ color: '#ffe929' }}>2016</p>
+                      </div>
+                      <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-primary border-4 border-background"></div>
+                      <div className="w-1/2 pl-8">
+                        <p className="text-muted-foreground">Yasiris begins teaching table tennis to Bronx youth in after school programs.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* 2020 */}
+                  <div className="relative">
+                    <div className="flex items-center">
+                      <div className="w-1/2 text-right pr-8">
+                        <p className="text-2xl font-bold" style={{ color: '#ffe929' }}>2020</p>
+                      </div>
+                      <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-primary border-4 border-background"></div>
+                      <div className="w-1/2 pl-8">
+                        <p className="text-muted-foreground">Spin & Learn launches, bringing structured programs to Bronx schools and expanding across NYC.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* 2022 */}
+                  <div className="relative">
+                    <div className="flex items-center">
+                      <div className="w-1/2 text-right pr-8">
+                        <p className="text-2xl font-bold" style={{ color: '#ffe929' }}>2022</p>
+                      </div>
+                      <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-primary border-4 border-background"></div>
+                      <div className="w-1/2 pl-8">
+                        <p className="text-muted-foreground">Vision grows beyond schools, dream of a community hub begins.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* 2025 */}
+                  <div className="relative">
+                    <div className="flex items-center">
+                      <div className="w-1/2 text-right pr-8">
+                        <p className="text-2xl font-bold" style={{ color: '#ffe929' }}>2025</p>
+                      </div>
+                      <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-primary border-4 border-background"></div>
+                      <div className="w-1/2 pl-8">
+                        <p className="text-muted-foreground">Spin & Learn Foundation Inc. officially incorporated as a 501(c)(3) nonprofit.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
