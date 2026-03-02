@@ -56,6 +56,7 @@
 - [ ] MEDIUM: Standardize grid gaps throughout the page
 - [ ] MEDIUM: Remove inline style overrides and use Tailwind classes
 - [x] MEDIUM: Add success feedback to newsletter signup
+- [x] Connect 'Get In Touch' form to backend service (tRPC + database + email)
 - [ ] MEDIUM: Ensure all footer links have corresponding section IDs
 - [ ] LOW: Add decorative elements between sections
 - [ ] LOW: Add text-shadow to hero heading for readability

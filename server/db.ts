@@ -168,3 +168,53 @@ export async function updateCarouselImageOrder(id: number, displayOrder: number)
     return false;
   }
 }
+
+// Contact form submission queries
+export async function createContactSubmission(data: {
+  name: string;
+  email: string;
+  category: string;
+  message: string;
+}) {
+  const db = await getDb();
+  if (!db) {
+    console.warn("[Database] Cannot create contact submission: database not available");
+    return null;
+  }
+
+  try {
+    const { contactSubmissions } = await import("../drizzle/schema");
+    const result = await db.insert(contactSubmissions).values(data);
+    
+    // Fetch and return the created record
+    const created = await db
+      .select()
+      .from(contactSubmissions)
+      .where(eq(contactSubmissions.id, result[0].insertId as number))
+      .limit(1);
+    return created.length > 0 ? created[0] : null;
+  } catch (error) {
+    console.error("[Database] Failed to create contact submission:", error);
+    return null;
+  }
+}
+
+export async function getContactSubmissions() {
+  const db = await getDb();
+  if (!db) {
+    console.warn("[Database] Cannot get contact submissions: database not available");
+    return [];
+  }
+
+  try {
+    const { contactSubmissions } = await import("../drizzle/schema");
+    const result = await db
+      .select()
+      .from(contactSubmissions)
+      .orderBy(desc(contactSubmissions.createdAt));
+    return result;
+  } catch (error) {
+    console.error("[Database] Failed to get contact submissions:", error);
+    return [];
+  }
+}

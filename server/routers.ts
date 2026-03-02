@@ -3,7 +3,7 @@ import { COOKIE_NAME } from "../shared/const";
 import { systemRouter } from "./_core/systemRouter";
 import { publicProcedure, router, protectedProcedure } from "./_core/trpc";
 import { z } from "zod";
-import { createCarouselImage, deleteCarouselImage, getCarouselImages, updateCarouselImageOrder } from "./db";
+import { createCarouselImage, deleteCarouselImage, getCarouselImages, updateCarouselImageOrder, createContactSubmission } from "./db";
 import { storagePut } from "./storage";
 
 export const appRouter = router({
@@ -86,6 +86,52 @@ export const appRouter = router({
 
         const success = await updateCarouselImageOrder(input.id, input.displayOrder);
         return { success };
+      }),
+  }),
+
+  contact: router({
+    submit: publicProcedure
+      .input(
+        z.object({
+          name: z.string().min(1).max(255),
+          email: z.string().email(),
+          category: z.string().min(1).max(100),
+          message: z.string().min(10).max(5000),
+        })
+      )
+      .mutation(async ({ input }) => {
+        try {
+          const submission = await createContactSubmission({
+            name: input.name,
+            email: input.email,
+            category: input.category,
+            message: input.message,
+          });
+
+          if (!submission) {
+            throw new Error("Failed to save submission");
+          }
+
+          // Send notification to owner
+          try {
+            const { notifyOwner } = await import("./_core/notification");
+            await notifyOwner({
+              title: `New Contact Form Submission from ${input.name}`,
+              content: `Email: ${input.email}\nCategory: ${input.category}\n\nMessage:\n${input.message}`,
+            });
+          } catch (notifyError) {
+            console.error("[Contact] Failed to send notification:", notifyError);
+            // Don't throw - submission was saved successfully
+          }
+
+          return {
+            success: true,
+            message: "Thank you for your message. We will get back to you soon!",
+          };
+        } catch (error) {
+          console.error("[Contact] Failed to submit form:", error);
+          throw new Error("Failed to submit contact form. Please try again.");
+        }
       }),
   }),
 });

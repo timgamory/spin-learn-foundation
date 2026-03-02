@@ -41,3 +41,17 @@ export const carouselImages = mysqlTable("carousel_images", {
 
 export type CarouselImage = typeof carouselImages.$inferSelect;
 export type InsertCarouselImage = typeof carouselImages.$inferInsert;
+// Contact form submissions table
+export const contactSubmissions = mysqlTable("contact_submissions", {
+  id: int("id").autoincrement().primaryKey(),
+  name: varchar("name", { length: 255 }).notNull(),
+  email: varchar("email", { length: 320 }).notNull(),
+  category: varchar("category", { length: 100 }).notNull(), // "General", "Partnership", "Grant", etc.
+  message: text("message").notNull(),
+  status: mysqlEnum("status", ["new", "read", "responded"]).default("new").notNull(),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  respondedAt: timestamp("respondedAt"),
+});
+
+export type ContactSubmission = typeof contactSubmissions.$inferSelect;
+export type InsertContactSubmission = typeof contactSubmissions.$inferInsert;
