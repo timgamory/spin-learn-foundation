@@ -6,7 +6,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowRight, Users, Heart, Trophy, Target, Mail, Brain, Zap, MapPin, Rocket, Repeat } from "lucide-react";
+import { ArrowRight, Users, Heart, Trophy, Target, Mail, Brain, Zap, MapPin, Rocket, Repeat, Menu, X } from "lucide-react";
 import { Link } from "wouter";
 import { useState, useEffect } from "react";
 import { useAuth } from "@/_core/hooks/useAuth";
@@ -16,6 +16,7 @@ export default function Home() {
   // The userAuth hooks provides authentication state
   // To implement login/logout functionality, simply call logout() or redirect to getLoginUrl()
   let { user, loading, error, isAuthenticated, logout } = useAuth();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const { data: dbCarouselImages = [] } = trpc.carousel.list.useQuery();
   
@@ -36,6 +37,8 @@ export default function Home() {
           <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
             <img src="/images/logo.png" alt="Spin & Learn Foundation" className="h-12" />
           </Link>
+          
+          {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
             <Link href="/" className="text-foreground hover:border-b-2 hover:border-[#00548a] transition-colors font-medium">
               Home
@@ -58,7 +61,44 @@ export default function Home() {
               </Button>
             </a>
           </div>
+          
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden p-2 text-foreground hover:bg-secondary rounded-lg transition-colors"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
         </div>
+        
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden border-t border-border bg-background">
+            <div className="container mx-auto py-4 space-y-3">
+              <Link href="/" className="block px-4 py-2 text-foreground hover:bg-secondary rounded-lg transition-colors font-medium" onClick={() => setMobileMenuOpen(false)}>
+                Home
+              </Link>
+              <Link href="/about" className="block px-4 py-2 text-foreground hover:bg-secondary rounded-lg transition-colors font-medium" onClick={() => setMobileMenuOpen(false)}>
+                About
+              </Link>
+              <Link href="/programs" className="block px-4 py-2 text-foreground hover:bg-secondary rounded-lg transition-colors font-medium" onClick={() => setMobileMenuOpen(false)}>
+                Programs
+              </Link>
+              <Link href="/blog" className="block px-4 py-2 text-foreground hover:bg-secondary rounded-lg transition-colors font-medium" onClick={() => setMobileMenuOpen(false)}>
+                Blog
+              </Link>
+              <Link href="/support" className="block px-4 py-2 text-foreground hover:bg-secondary rounded-lg transition-colors font-medium" onClick={() => setMobileMenuOpen(false)}>
+                Support Us
+              </Link>
+              <a href="/#contact" onClick={() => setMobileMenuOpen(false)}>
+                <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
+                  Contact
+                </Button>
+              </a>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section - Diagonal cut with dynamic energy */}
@@ -77,7 +117,7 @@ export default function Home() {
         <div className="container relative z-10 pt-12">
           <div className="max-w-3xl">
             <h1 
-              className="text-5xl md:text-7xl font-black text-primary-foreground mb-6 leading-tight"
+              className="text-6xl md:text-7xl font-black text-primary-foreground mb-6 leading-tight drop-shadow-lg"
               style={{ fontFamily: 'var(--font-display)' }}
             >
               The Bronx Deserves World-Class Table Tennis
@@ -114,14 +154,19 @@ export default function Home() {
         <div className="container">
           <div className="max-w-4xl mx-auto text-center">
             <h2 
-              className="text-4xl md:text-5xl font-black text-foreground mb-6"
+              className="text-5xl md:text-6xl font-black text-foreground mb-6"
               style={{ fontFamily: 'var(--font-display)' }}
             >
               Our Mission
             </h2>
-            <p className="text-xl text-muted-foreground leading-relaxed">
+            <p className="text-xl text-muted-foreground leading-relaxed mb-8">
               At Spin & Learn Foundation, our mission is to provide programs for economically disadvantaged individuals across diverse communities, ensuring access to enrichment opportunities through table tennis that promote physical and mental wellness, build personal resilience, and develop leadership skills for lifelong success
             </p>
+            <a href="/about">
+              <Button className="bg-[#ffe929] hover:bg-[#ffe929]/90 text-[#00548a] font-semibold px-8">
+                Learn Our Story
+              </Button>
+            </a>
           </div>
         </div>
       </section>
@@ -135,7 +180,7 @@ export default function Home() {
           >
             Why the Bronx Needs Table Tennis
           </h2>
-          <p className="text-center text-muted-foreground mb-12 text-lg max-w-3xl mx-auto" style={{fontSize: '20px'}}>
+          <p className="text-center text-muted-foreground mb-12 text-lg max-w-3xl mx-auto">
             The Bronx is NYC's poorest borough, yet its residents -- youth, adults, and seniors -- deserve access to structured sports programs, real competition opportunities, and spaces that build community. Table tennis is low-impact, can be played year-round indoors, and has one of the lowest injury rates of any sport. Yet the Bronx remains the only NYC borough without a single table tennis facility.
           </p>
           
@@ -185,7 +230,7 @@ export default function Home() {
       {/* Photo Gallery Grid Section */}
       <section className="py-12 md:py-15 bg-background">
         <div className="container">
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             {carouselImages.map((image, index) => (
               <div key={index} className="aspect-square overflow-hidden rounded-lg">
                 <img 
@@ -195,6 +240,13 @@ export default function Home() {
                 />
               </div>
             ))}
+          </div>
+          <div className="mt-12 text-center">
+            <a href="/programs">
+              <Button className="bg-[#ffe929] hover:bg-[#ffe929]/90 text-[#00548a] font-semibold px-8">
+                View All Programs
+              </Button>
+            </a>
           </div>
         </div>
       </section>
@@ -208,11 +260,11 @@ export default function Home() {
           >
             Why Your Support Matters
           </h2>
-          <p className="text-center text-muted-foreground mb-12 text-lg max-w-2xl mx-auto" style={{fontSize: '20px'}}>
+          <p className="text-center text-muted-foreground mb-12 text-lg max-w-2xl mx-auto">
             Every contribution helps us build something the Bronx has never had. Here is what you are making possible.
           </p>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[
               {
                 icon: MapPin,
@@ -261,7 +313,7 @@ export default function Home() {
           {/* CTA Button */}
           <div className="mt-12 text-center">
             <a href="/programs" className="inline-block">
-              <Button size="lg" className="bg-[#ffe929] hover:bg-[#ffe929]/90 text-[#00548a] font-semibold px-8" style={{fontSize: '18px'}}>
+              <Button size="lg" className="bg-[#ffe929] hover:bg-[#ffe929]/90 text-[#00548a] font-semibold px-8">
                 Explore Our Programs
               </Button>
             </a>
@@ -275,7 +327,7 @@ export default function Home() {
         <div className="container relative z-10">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <h2 
-              className="text-4xl md:text-5xl font-black mb-6 text-center"
+              className="text-5xl md:text-6xl font-black mb-6 text-center"
               style={{ fontFamily: 'var(--font-display)' }}
             >
               Our 2026 Goals
@@ -319,7 +371,7 @@ export default function Home() {
         <div className="container">
           <div className="max-w-4xl mx-auto text-center">
             <h2 
-              className="text-4xl md:text-5xl font-black text-foreground mb-6"
+              className="text-5xl md:text-6xl font-black text-foreground mb-6"
               style={{ fontFamily: 'var(--font-display)' }}
             >
               Join Us
@@ -350,7 +402,7 @@ export default function Home() {
         <div className="container">
           <div className="max-w-5xl mx-auto">
             <h2 
-              className="text-4xl md:text-5xl font-black text-foreground mb-16 text-center"
+              className="text-5xl md:text-6xl font-black text-foreground mb-16 text-center"
               style={{ fontFamily: 'var(--font-display)' }}
             >
               Get In Touch
@@ -419,7 +471,7 @@ export default function Home() {
               <div className="space-y-2">
                 <a href="#about" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">About Us</a>
                 <a href="#programs" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">Programs</a>
-                <a href="#impact" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">Impact</a>
+                <a href="#goals" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">2026 Goals</a>
                 <a href="#support" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">Support Us</a>
               </div>
             </div>

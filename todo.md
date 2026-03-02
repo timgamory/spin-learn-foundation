@@ -47,6 +47,17 @@
 - [x] Standardize card design across all sections (borders + soft shadows, no gradients)
 - [x] Create unified icon badge system (consistent size, style, color)
 - [x] Add subtle accent color for secondary elements
+- [x] HIGH: Add mobile hamburger menu for navigation
+- [x] HIGH: Vary heading sizes by section importance
+- [x] HIGH: Add CTAs to Mission and Photo Gallery sections
+- [ ] MEDIUM: Standardize grid gaps throughout the page
+- [ ] MEDIUM: Remove inline style overrides and use Tailwind classes
+- [ ] MEDIUM: Add success feedback to newsletter signup
+- [ ] MEDIUM: Ensure all footer links have corresponding section IDs
+- [ ] LOW: Add decorative elements between sections
+- [ ] LOW: Add text-shadow to hero heading for readability
+- [ ] LOW: Add subtle background patterns or textures
+- [ ] LOW: Add hover states to more interactive elements
 - [ ] Add admin navigation link to main website (visible only to admins)
 - [ ] Create functional contact form with email integration
 - [ ] Add testimonials section with rotating quotes
