@@ -177,7 +177,7 @@ export default function About() {
       </section>
 
       {/* Board Members Section */}
-      <section className="py-20 bg-card">
+      <section className="py-20 bg-background">
         <div className="container">
           <h2 
             className="text-4xl md:text-5xl font-black text-foreground mb-16 text-center"
@@ -186,13 +186,64 @@ export default function About() {
             Board Members
           </h2>
           
-          <div className="max-w-4xl mx-auto text-center">
-            <p className="text-lg text-muted-foreground mb-8">
-              Our board is coming soon. We're building a diverse team of educators, entrepreneurs, community leaders, and table tennis experts to guide Spin & Learn Foundation's growth.
-            </p>
-            <Button className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
-              Interested in joining our board?
-            </Button>
+          {/* Donovan Alleyne - Treasurer */}
+          <div className="max-w-4xl mx-auto mb-20">
+            <Card className="p-8 md:p-12">
+              <div className="grid md:grid-cols-3 gap-8 items-start">
+                <div className="md:col-span-1">
+                  <div className="rounded-lg overflow-hidden aspect-square">
+                    <img 
+                      src="https://d2xsxph8kpxj0f.cloudfront.net/310519663065691612/fJYsHeBpEvBRpDiLmUdMYa/Donovan_54fe5399.jpeg" 
+                      alt="Donovan Alleyne" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+                
+                <div className="md:col-span-2">
+                  <h3 className="text-3xl font-bold text-foreground mb-2">Donovan Alleyne</h3>
+                  <p className="text-accent font-semibold mb-6">Treasurer</p>
+                  
+                  <p className="text-muted-foreground mb-6 leading-relaxed">
+                    Donovan Alleyne brings extensive financial management and nonprofit leadership experience to Spin & Learn Foundation. With a passion for community development and youth empowerment, Donovan ensures our organization operates with fiscal responsibility and transparency while maximizing our impact in the Bronx.
+                  </p>
+                  
+                  <p className="text-muted-foreground leading-relaxed">
+                    As Treasurer, Donovan oversees all financial operations, grant management, and strategic planning to support Spin & Learn's mission of making world-class table tennis accessible to every Bronx resident.
+                  </p>
+                </div>
+              </div>
+            </Card>
+          </div>
+
+          {/* Tim Gamory - Board Member */}
+          <div className="max-w-4xl mx-auto">
+            <Card className="p-8 md:p-12">
+              <div className="grid md:grid-cols-3 gap-8 items-start">
+                <div className="md:col-span-1">
+                  <div className="rounded-lg overflow-hidden aspect-square">
+                    <img 
+                      src="https://d2xsxph8kpxj0f.cloudfront.net/310519663065691612/fJYsHeBpEvBRpDiLmUdMYa/Tim_7836ee83.jpeg" 
+                      alt="Tim Gamory" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+                
+                <div className="md:col-span-2">
+                  <h3 className="text-3xl font-bold text-foreground mb-2">Tim Gamory</h3>
+                  <p className="text-accent font-semibold mb-6">Board Member</p>
+                  
+                  <p className="text-muted-foreground mb-6 leading-relaxed">
+                    Tim Gamory is a strategic advisor and community advocate committed to building equitable opportunities for underserved communities. With deep roots in the Bronx and a track record of supporting grassroots initiatives, Tim brings invaluable perspective on community engagement and sustainable program development.
+                  </p>
+                  
+                  <p className="text-muted-foreground leading-relaxed">
+                    Tim's guidance helps Spin & Learn Foundation stay grounded in community needs while scaling our impact across youth, adult, and senior programs throughout the borough.
+                  </p>
+                </div>
+              </div>
+            </Card>
           </div>
         </div>
       </section>
