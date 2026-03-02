@@ -53,6 +53,9 @@
 - [x] Replace photo carousel with lightbox gallery (3-col desktop, 2-col mobile)
 - [x] Convert photo grid to image slider with navigation arrows
 - [x] Add auto-play functionality to image slider (5 second rotation)
+- [x] Add keyboard navigation to image slider (arrow keys + Escape)
+- [x] Add touch/swipe gestures for mobile
+- [x] Add accessibility labels and aria attributes
 - [ ] MEDIUM: Standardize grid gaps throughout the page
 - [ ] MEDIUM: Remove inline style overrides and use Tailwind classes
 - [x] MEDIUM: Add success feedback to newsletter signup

@@ -25,6 +25,8 @@ export default function Home() {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
   const [isHovering, setIsHovering] = useState(false);
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
   
   // Contact form state
   const [contactForm, setContactForm] = useState({
@@ -71,6 +73,45 @@ export default function Home() {
     
     return () => clearInterval(interval);
   }, [isHovering, carouselImages.length]);
+
+  // Keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowLeft') {
+        setLightboxIndex((prevIndex) => (prevIndex - 1 + carouselImages.length) % carouselImages.length);
+      } else if (e.key === 'ArrowRight') {
+        setLightboxIndex((prevIndex) => (prevIndex + 1) % carouselImages.length);
+      } else if (e.key === 'Escape' && lightboxOpen) {
+        setLightboxOpen(false);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [carouselImages.length, lightboxOpen]);
+
+  // Touch swipe handler
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    setTouchEnd(e.changedTouches[0].clientX);
+    handleSwipe();
+  };
+
+  const handleSwipe = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > 50;
+    const isRightSwipe = distance < -50;
+
+    if (isLeftSwipe) {
+      setLightboxIndex((prevIndex) => (prevIndex + 1) % carouselImages.length);
+    } else if (isRightSwipe) {
+      setLightboxIndex((prevIndex) => (prevIndex - 1 + carouselImages.length) % carouselImages.length);
+    }
+  };
 
   const validateEmail = (email: string) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -354,7 +395,13 @@ export default function Home() {
             Our Community in Action
           </h2>
           <div className="max-w-4xl mx-auto">
-            <div className="relative" onMouseEnter={() => setIsHovering(true)} onMouseLeave={() => setIsHovering(false)}>
+            <div 
+              className="relative" 
+              onMouseEnter={() => setIsHovering(true)} 
+              onMouseLeave={() => setIsHovering(false)}
+              onTouchStart={handleTouchStart}
+              onTouchEnd={handleTouchEnd}
+            >
               {/* Slider Container */}
               <div className="relative h-96 md:h-[500px] overflow-hidden rounded-lg">
                 <img 
@@ -368,6 +415,8 @@ export default function Home() {
               <button
                 onClick={() => setLightboxIndex((lightboxIndex - 1 + carouselImages.length) % carouselImages.length)}
                 className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/75 text-white p-3 rounded-full transition-all duration-300 z-10"
+                aria-label="Previous image"
+                title="Previous image (or press left arrow)"
               >
                 <ChevronLeft className="w-6 h-6" />
               </button>
@@ -376,6 +425,8 @@ export default function Home() {
               <button
                 onClick={() => setLightboxIndex((lightboxIndex + 1) % carouselImages.length)}
                 className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/75 text-white p-3 rounded-full transition-all duration-300 z-10"
+                aria-label="Next image"
+                title="Next image (or press right arrow)"
               >
                 <ChevronRight className="w-6 h-6" />
               </button>
@@ -387,7 +438,7 @@ export default function Home() {
             </div>
             
             {/* Thumbnail Dots */}
-            <div className="flex justify-center gap-2 mt-8">
+            <div className="flex justify-center gap-2 mt-8" role="tablist" aria-label="Image gallery navigation">
               {carouselImages.map((_, index) => (
                 <button
                   key={index}
@@ -395,6 +446,10 @@ export default function Home() {
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
                     index === lightboxIndex ? 'bg-primary w-8' : 'bg-border hover:bg-primary/50'
                   }`}
+                  role="tab"
+                  aria-selected={index === lightboxIndex}
+                  aria-label={`Go to image ${index + 1}`}
+                  title={`Image ${index + 1}`}
                 />
               ))}
             </div>
