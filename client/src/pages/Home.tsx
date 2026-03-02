@@ -166,7 +166,7 @@ export default function Home() {
                 ]
               }
             ].map((group, index) => (
-              <Card key={index} className="p-6 bg-card border-2 border-border">
+              <Card key={index} className="p-6 bg-card border border-border rounded-lg shadow-sm hover:shadow-md transition-shadow">
                 <h3 className="text-xl font-bold text-foreground mb-4">{group.title}</h3>
                 <ul className="space-y-3">
                   {group.points.map((point, idx) => (
@@ -247,12 +247,12 @@ export default function Home() {
             ].map((item, index) => (
               <Card 
                 key={index}
-                className="p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-2 border-primary/30 bg-background rounded-lg"
+                className="p-6 bg-card border border-border rounded-lg shadow-sm hover:shadow-md transition-shadow"
               >
-                <div className="w-12 h-12 rounded-full bg-primary/15 flex items-center justify-center mb-4">
-                  <item.icon className="w-6 h-6 text-primary" />
+                <div className="w-12 h-12 rounded-full bg-[#e8f4f8] flex items-center justify-center mb-4">
+                  <item.icon className="w-6 h-6 text-[#7fb3d5]" />
                 </div>
-                        <h3 className="text-2xl font-bold text-foreground mb-3">{item.title}</h3>
+                <h3 className="text-xl font-bold text-foreground mb-3">{item.title}</h3>
                 <p className="text-base text-muted-foreground leading-relaxed">{item.description}</p>
               </Card>
             ))}
@@ -302,11 +302,11 @@ export default function Home() {
                 description: "Establish consistent weekly training and league play serving 30+ regular participants in the community."
               }
             ].map((goal, index) => (
-              <Card key={index} className="p-8 bg-primary/10 border-2 border-[#ffe929] text-primary-foreground hover:shadow-lg transition-all duration-300">
-                <div className="w-14 h-14 rounded-full bg-[#ffe929] flex items-center justify-center mb-6">
-                  <goal.icon className="w-7 h-7 text-[#00548a]" />
+              <Card key={index} className="p-8 bg-primary/5 border border-primary/20 text-primary-foreground rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                <div className="w-12 h-12 rounded-full bg-[#ffe929] flex items-center justify-center mb-6">
+                  <goal.icon className="w-6 h-6 text-[#00548a]" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4">{goal.title}</h3>
+                <h3 className="text-xl font-bold mb-4">{goal.title}</h3>
                 <p className="text-primary-foreground/90 leading-relaxed">{goal.description}</p>
               </Card>
             ))}
