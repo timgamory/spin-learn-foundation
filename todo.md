@@ -51,6 +51,7 @@
 - [x] HIGH: Vary heading sizes by section importance
 - [x] HIGH: Add CTAs to Mission and Photo Gallery sections
 - [x] Replace photo carousel with lightbox gallery (3-col desktop, 2-col mobile)
+- [x] Convert photo grid to image slider with navigation arrows
 - [ ] MEDIUM: Standardize grid gaps throughout the page
 - [ ] MEDIUM: Remove inline style overrides and use Tailwind classes
 - [x] MEDIUM: Add success feedback to newsletter signup

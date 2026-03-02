@@ -273,30 +273,59 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Photo Gallery Lightbox Section */}
+      {/* Photo Gallery Slider Section */}
       <section className="py-12 md:py-15 bg-background">
         <div className="container">
           <h2 className="text-4xl md:text-5xl font-black text-foreground mb-12 text-center" style={{ fontFamily: 'var(--font-display)' }}>
             Our Community in Action
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {carouselImages.map((image, index) => (
-              <div 
-                key={index} 
-                className="aspect-square overflow-hidden rounded-lg cursor-pointer group"
-                onClick={() => {
-                  setLightboxIndex(index);
-                  setLightboxOpen(true);
-                }}
-              >
+          <div className="max-w-4xl mx-auto">
+            <div className="relative">
+              {/* Slider Container */}
+              <div className="relative h-96 md:h-[500px] overflow-hidden rounded-lg">
                 <img 
-                  src={image} 
-                  alt={`Gallery image ${index + 1}`}
-                  className="w-full h-full object-cover group-hover:brightness-75 transition-all duration-300"
+                  src={carouselImages[lightboxIndex]} 
+                  alt={`Gallery image ${lightboxIndex + 1}`}
+                  className="w-full h-full object-cover transition-opacity duration-500"
                 />
               </div>
-            ))}
+              
+              {/* Left Arrow */}
+              <button
+                onClick={() => setLightboxIndex((lightboxIndex - 1 + carouselImages.length) % carouselImages.length)}
+                className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/75 text-white p-3 rounded-full transition-all duration-300 z-10"
+              >
+                <ChevronLeft className="w-6 h-6" />
+              </button>
+              
+              {/* Right Arrow */}
+              <button
+                onClick={() => setLightboxIndex((lightboxIndex + 1) % carouselImages.length)}
+                className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/75 text-white p-3 rounded-full transition-all duration-300 z-10"
+              >
+                <ChevronRight className="w-6 h-6" />
+              </button>
+              
+              {/* Image Counter */}
+              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black/60 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                {lightboxIndex + 1} / {carouselImages.length}
+              </div>
+            </div>
+            
+            {/* Thumbnail Dots */}
+            <div className="flex justify-center gap-2 mt-8">
+              {carouselImages.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setLightboxIndex(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    index === lightboxIndex ? 'bg-primary w-8' : 'bg-border hover:bg-primary/50'
+                  }`}
+                />
+              ))}
+            </div>
           </div>
+          
           <div className="mt-12 text-center">
             <a href="/programs">
               <Button className="bg-[#ffe929] hover:bg-[#ffe929]/90 text-[#00548a] font-semibold px-8">
