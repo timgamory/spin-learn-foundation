@@ -6,7 +6,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowRight, Users, Heart, Trophy, Target, Mail, Brain, Zap, MapPin, Rocket, Repeat, Menu, X } from "lucide-react";
+import { ArrowRight, Users, Heart, Trophy, Target, Mail, Brain, Zap, MapPin, Rocket, Repeat, Menu, X, ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "wouter";
 import { useState, useEffect } from "react";
 import { useAuth } from "@/_core/hooks/useAuth";
@@ -22,6 +22,8 @@ export default function Home() {
   const [newsletterError, setNewsletterError] = useState('');
   const [newsletterSuccess, setNewsletterSuccess] = useState(false);
   const [newsletterSubmitting, setNewsletterSubmitting] = useState(false);
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
 
   const { data: dbCarouselImages = [] } = trpc.carousel.list.useQuery();
   
@@ -271,16 +273,26 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Photo Gallery Grid Section */}
+      {/* Photo Gallery Lightbox Section */}
       <section className="py-12 md:py-15 bg-background">
         <div className="container">
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+          <h2 className="text-4xl md:text-5xl font-black text-foreground mb-12 text-center" style={{ fontFamily: 'var(--font-display)' }}>
+            Our Community in Action
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {carouselImages.map((image, index) => (
-              <div key={index} className="aspect-square overflow-hidden rounded-lg">
+              <div 
+                key={index} 
+                className="aspect-square overflow-hidden rounded-lg cursor-pointer group"
+                onClick={() => {
+                  setLightboxIndex(index);
+                  setLightboxOpen(true);
+                }}
+              >
                 <img 
                   src={image} 
                   alt={`Gallery image ${index + 1}`}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-cover group-hover:brightness-75 transition-all duration-300"
                 />
               </div>
             ))}
@@ -294,6 +306,42 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Lightbox Overlay */}
+      {lightboxOpen && (
+        <div className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4">
+          <button
+            onClick={() => setLightboxOpen(false)}
+            className="absolute top-6 right-6 text-white hover:text-gray-300 transition-colors"
+          >
+            <X className="w-8 h-8" />
+          </button>
+          
+          <button
+            onClick={() => setLightboxIndex((lightboxIndex - 1 + carouselImages.length) % carouselImages.length)}
+            className="absolute left-6 text-white hover:text-gray-300 transition-colors"
+          >
+            <ChevronLeft className="w-8 h-8" />
+          </button>
+          
+          <img
+            src={carouselImages[lightboxIndex]}
+            alt={`Gallery image ${lightboxIndex + 1}`}
+            className="max-w-4xl max-h-[90vh] object-contain"
+          />
+          
+          <button
+            onClick={() => setLightboxIndex((lightboxIndex + 1) % carouselImages.length)}
+            className="absolute right-6 text-white hover:text-gray-300 transition-colors"
+          >
+            <ChevronRight className="w-8 h-8" />
+          </button>
+          
+          <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-white text-sm">
+            {lightboxIndex + 1} / {carouselImages.length}
+          </div>
+        </div>
+      )}
 
       {/* Why We Matter Section - Reframed around benefits */}
       <section className="py-12 md:py-15 bg-card">

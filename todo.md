@@ -50,6 +50,7 @@
 - [x] HIGH: Add mobile hamburger menu for navigation
 - [x] HIGH: Vary heading sizes by section importance
 - [x] HIGH: Add CTAs to Mission and Photo Gallery sections
+- [x] Replace photo carousel with lightbox gallery (3-col desktop, 2-col mobile)
 - [ ] MEDIUM: Standardize grid gaps throughout the page
 - [ ] MEDIUM: Remove inline style overrides and use Tailwind classes
 - [x] MEDIUM: Add success feedback to newsletter signup
