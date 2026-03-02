@@ -69,16 +69,19 @@ export default function About() {
             </h2>
             <div className="prose prose-lg max-w-none text-muted-foreground space-y-6">
               <p>
-                Spin & Learn Foundation was founded with a simple observation: the Bronx is the only NYC borough without a single table tennis facility. Despite being a borough full of talent, energy, and community spirit, residents of all ages lacked access to a sport that transforms lives.
+                Spin & Learn Foundation was born from a simple observation and a big dream.
               </p>
               <p>
-                Table tennis is more than a sport. It's affordable (under $20 to start), can be played year-round indoors, and is low-impact but highly engaging. Research shows it improves cognitive function, helps with ADHD symptoms in children, and supports brain health in seniors. Yet the Bronx remained underserved.
+                Since 2022, we have been working in Bronx schools through our table tennis programs, watching students light up at the table, develop focus and confidence, and discover a sport that could change their lives. But when the school day ended, there was nowhere for them to go. No club. No training center. No community space dedicated to the sport.
               </p>
               <p>
-                We founded Spin & Learn to change that. Today, we serve youth, adults, and seniors across 15+ community locations, bringing world-class coaching, competitive opportunities, and genuine community connection to thousands of Bronx residents each year.
+                That gap became impossible to ignore when we learned that the Bronx is the only NYC borough without a single table tennis facility.
               </p>
               <p>
-                Our mission is clear: we train youth into confident athletes, support adults in building new skills, and help seniors stay active and connected. Through table tennis, we're building a healthier, more connected Bronx.
+                In November 2025 we officially incorporated Spin & Learn Foundation, Inc. as a 501(c)(3) nonprofit to change that. Our dream is to create a permanent home for table tennis in the Bronx, a space where youth, adults, and seniors can train, compete, and connect year-round regardless of income or experience level.
+              </p>
+              <p>
+                We are just getting started. But the need is real, the community is ready, and we are committed to building something lasting.
               </p>
             </div>
           </div>
@@ -99,8 +102,12 @@ export default function About() {
               <div className="grid md:grid-cols-3 gap-8 items-start">
                 {/* Placeholder for photo */}
                 <div className="md:col-span-1">
-                  <div className="bg-muted rounded-lg aspect-square flex items-center justify-center">
-                    <span className="text-muted-foreground text-sm">Photo Placeholder</span>
+                  <div className="rounded-lg overflow-hidden aspect-square">
+                    <img 
+                      src="https://d2xsxph8kpxj0f.cloudfront.net/310519663065691612/fJYsHeBpEvBRpDiLmUdMYa/YasirisHeadshot_878e50fd.jpg" 
+                      alt="Yasiris Ortiz" 
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 </div>
                 
@@ -179,42 +186,13 @@ export default function About() {
             Board Members
           </h2>
           
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {/* Board Member 1 */}
-            <Card className="p-6 text-center">
-              <div className="bg-muted rounded-lg aspect-square flex items-center justify-center mb-6">
-                <span className="text-muted-foreground text-sm">Photo Placeholder</span>
-              </div>
-              <h3 className="text-xl font-bold text-foreground mb-2">Board Member Name</h3>
-              <p className="text-accent font-semibold mb-4">Title / Role</p>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                Brief bio describing their background, expertise, and connection to Spin & Learn Foundation's mission.
-              </p>
-            </Card>
-
-            {/* Board Member 2 */}
-            <Card className="p-6 text-center">
-              <div className="bg-muted rounded-lg aspect-square flex items-center justify-center mb-6">
-                <span className="text-muted-foreground text-sm">Photo Placeholder</span>
-              </div>
-              <h3 className="text-xl font-bold text-foreground mb-2">Board Member Name</h3>
-              <p className="text-accent font-semibold mb-4">Title / Role</p>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                Brief bio describing their background, expertise, and connection to Spin & Learn Foundation's mission.
-              </p>
-            </Card>
-
-            {/* Board Member 3 */}
-            <Card className="p-6 text-center">
-              <div className="bg-muted rounded-lg aspect-square flex items-center justify-center mb-6">
-                <span className="text-muted-foreground text-sm">Photo Placeholder</span>
-              </div>
-              <h3 className="text-xl font-bold text-foreground mb-2">Board Member Name</h3>
-              <p className="text-accent font-semibold mb-4">Title / Role</p>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                Brief bio describing their background, expertise, and connection to Spin & Learn Foundation's mission.
-              </p>
-            </Card>
+          <div className="max-w-4xl mx-auto text-center">
+            <p className="text-lg text-muted-foreground mb-8">
+              Our board is coming soon. We're building a diverse team of educators, entrepreneurs, community leaders, and table tennis experts to guide Spin & Learn Foundation's growth.
+            </p>
+            <Button className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
+              Interested in joining our board?
+            </Button>
           </div>
         </div>
       </section>
