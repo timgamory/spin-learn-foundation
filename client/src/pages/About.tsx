@@ -85,67 +85,17 @@ export default function About() {
               </p>
             </div>
 
-            {/* Timeline */}
-            <div className="max-w-4xl">
-              <div className="relative">
-                {/* Timeline line */}
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-primary"></div>
-                
-                {/* Timeline items */}
-                <div className="space-y-12">
-                  {/* 2016 */}
-                  <div className="relative">
-                    <div className="flex items-center">
-                      <div className="w-1/2 text-right pr-8">
-                        <p className="text-2xl font-bold" style={{ color: '#ffe929' }}>2016</p>
-                      </div>
-                      <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-primary border-4 border-background"></div>
-                      <div className="w-1/2 pl-8">
-                        <p className="text-muted-foreground">Yasiris begins teaching table tennis to Bronx youth in after school programs.</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* 2020 */}
-                  <div className="relative">
-                    <div className="flex items-center">
-                      <div className="w-1/2 text-right pr-8">
-                        <p className="text-2xl font-bold" style={{ color: '#ffe929' }}>2020</p>
-                      </div>
-                      <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-primary border-4 border-background"></div>
-                      <div className="w-1/2 pl-8">
-                        <p className="text-muted-foreground">Spin & Learn launches, bringing structured programs to Bronx schools and expanding across NYC.</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* 2022 */}
-                  <div className="relative">
-                    <div className="flex items-center">
-                      <div className="w-1/2 text-right pr-8">
-                        <p className="text-2xl font-bold" style={{ color: '#ffe929' }}>2022</p>
-                      </div>
-                      <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-primary border-4 border-background"></div>
-                      <div className="w-1/2 pl-8">
-                        <p className="text-muted-foreground">Vision grows beyond schools, dream of a community hub begins.</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* 2025 */}
-                  <div className="relative">
-                    <div className="flex items-center">
-                      <div className="w-1/2 text-right pr-8">
-                        <p className="text-2xl font-bold" style={{ color: '#ffe929' }}>2025</p>
-                      </div>
-                      <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-primary border-4 border-background"></div>
-                      <div className="w-1/2 pl-8">
-                        <p className="text-muted-foreground">Spin & Learn Foundation Inc. officially incorporated as a 501(c)(3) nonprofit.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            {/* Our Mission Section */}
+            <div className="max-w-4xl mt-12 pt-12 border-t border-border">
+              <h3 
+                className="text-3xl md:text-4xl font-black text-foreground mb-6"
+                style={{ fontFamily: 'var(--font-display)' }}
+              >
+                Our Mission
+              </h3>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                At Spin & Learn Foundation, our mission is to provide programs for economically disadvantaged individuals across diverse communities, ensuring access to enrichment opportunities through table tennis that promote physical and mental wellness, build personal resilience, and develop leadership skills for lifelong success.
+              </p>
             </div>
           </div>
         </div>
