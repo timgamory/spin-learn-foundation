@@ -114,7 +114,7 @@ export default function About() {
                 {/* Bio and credentials */}
                 <div className="md:col-span-2">
                   <h3 className="text-3xl font-bold text-foreground mb-2">Yasiris Ortiz</h3>
-                  <p className="text-accent font-semibold mb-6">Founder & Executive Director</p>
+                  <p className="text-primary font-semibold mb-6">Founder & Executive Director</p>
                   
                   <p className="text-muted-foreground mb-6 leading-relaxed">
                     Yasiris Ortiz is a 4-time Dominican national table tennis champion, 2018 Caribbean Senior Champion, and Pan American Games competitor who brought her passion for the sport to New York City in 2016.
@@ -183,7 +183,7 @@ export default function About() {
             className="text-4xl md:text-5xl font-black text-foreground mb-16 text-center"
             style={{ fontFamily: 'var(--font-display)' }}
           >
-            Board Members
+            Meet The Board
           </h2>
           
           {/* Donovan Alleyne - Treasurer */}
@@ -202,7 +202,7 @@ export default function About() {
                 
                 <div className="md:col-span-2">
                   <h3 className="text-3xl font-bold text-foreground mb-2">Donovan Alleyne</h3>
-                  <p className="text-accent font-semibold mb-6">Treasurer</p>
+                  <p className="text-primary font-semibold mb-6">Treasurer</p>
                   
                   <p className="text-muted-foreground mb-6 leading-relaxed">
                     Donovan Alleyne brings extensive financial management and nonprofit leadership experience to Spin & Learn Foundation. With a passion for community development and youth empowerment, Donovan ensures our organization operates with fiscal responsibility and transparency while maximizing our impact in the Bronx.
@@ -232,7 +232,7 @@ export default function About() {
                 
                 <div className="md:col-span-2">
                   <h3 className="text-3xl font-bold text-foreground mb-2">Tim Gamory</h3>
-                  <p className="text-accent font-semibold mb-6">Board Member</p>
+                  <p className="text-primary font-semibold mb-6">Secretary</p>
                   
                   <p className="text-muted-foreground mb-6 leading-relaxed">
                     Tim Gamory is a strategic advisor and community advocate committed to building equitable opportunities for underserved communities. With deep roots in the Bronx and a track record of supporting grassroots initiatives, Tim brings invaluable perspective on community engagement and sustainable program development.
