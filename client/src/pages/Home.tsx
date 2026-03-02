@@ -9,7 +9,6 @@ import { Card } from "@/components/ui/card";
 import { ArrowRight, Users, Heart, Trophy, Target, Mail, Brain, Zap, MapPin } from "lucide-react";
 import { Link } from "wouter";
 import { useState, useEffect } from "react";
-import PhotoCarousel from "@/components/PhotoCarousel";
 import { useAuth } from "@/_core/hooks/useAuth";
 import { trpc } from "@/lib/trpc";
 
@@ -90,13 +89,10 @@ export default function Home() {
               <a href="/support">
                 <Button 
                   size="lg" 
-                  className="bg-[#ffe929] hover:bg-[#ffe929]/90 text-[#00548a] text-lg px-8 group font-semibold"
+                  className="bg-[#ffe929] hover:bg-[#ffe929]/90 text-[#00548a] text-lg px-8 font-semibold"
                   asChild
                 >
-                  <span>
-                    Partner With Us
-                    <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-                  </span>
+                  <span>Partner With Us</span>
                 </Button>
               </a>
               <a href="/support">
@@ -114,7 +110,7 @@ export default function Home() {
       </section>
 
       {/* Mission Statement - Clean section */}
-      <section className="py-20 bg-card">
+      <section className="py-12 md:py-15 bg-card">
         <div className="container">
           <div className="max-w-4xl mx-auto text-center">
             <h2 
@@ -131,7 +127,7 @@ export default function Home() {
       </section>
 
       {/* The Problem Section - Why the Bronx Needs Table Tennis */}
-      <section className="py-20 bg-background">
+      <section className="py-12 md:py-15 bg-background">
         <div className="container">
           <h2 
             className="text-4xl md:text-5xl font-black text-foreground mb-4 text-center"
@@ -186,11 +182,25 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Photo Carousel Section */}
-      <PhotoCarousel images={carouselImages} autoScrollInterval={4000} />
+      {/* Photo Gallery Grid Section */}
+      <section className="py-12 md:py-15 bg-background">
+        <div className="container">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+            {carouselImages.map((image, index) => (
+              <div key={index} className="aspect-square overflow-hidden rounded-lg">
+                <img 
+                  src={image} 
+                  alt={`Gallery image ${index + 1}`}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Why We Matter Section - Reframed around benefits */}
-      <section className="py-20 bg-card">
+      <section className="py-12 md:py-15 bg-card">
         <div className="container">
           <h2 
             className="text-4xl md:text-5xl font-black text-foreground mb-4 text-center"
@@ -251,11 +261,8 @@ export default function Home() {
           {/* CTA Button */}
           <div className="mt-12 text-center">
             <a href="/programs" className="inline-block">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8">
-                <span style={{fontSize: '18px'}}>
-                  Explore Our Programs
-                  <ArrowRight className="ml-2" />
-                </span>
+              <Button size="lg" className="bg-[#ffe929] hover:bg-[#ffe929]/90 text-[#00548a] font-semibold px-8" style={{fontSize: '18px'}}>
+                Explore Our Programs
               </Button>
             </a>
           </div>
@@ -264,7 +271,7 @@ export default function Home() {
 
 
       {/* Our 2026 Goals Section */}
-      <section id="goals" className="py-20 bg-primary text-primary-foreground relative overflow-hidden">
+      <section id="goals" className="py-12 md:py-15 bg-primary text-primary-foreground relative overflow-hidden">
         <div className="container relative z-10">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <h2 
@@ -308,7 +315,7 @@ export default function Home() {
       </section>
 
       {/* Support Section - Reframed as "Join Us" */}
-      <section id="support" className="py-20 bg-background">
+      <section id="support" className="py-12 md:py-15 bg-background">
         <div className="container">
           <div className="max-w-4xl mx-auto text-center">
             <h2 
@@ -323,21 +330,19 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 size="lg" 
-                className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8 font-semibold"
+                className="bg-[#ffe929] hover:bg-[#ffe929]/90 text-[#00548a] text-lg px-8 font-semibold"
               >
                 Make a Donation
               </Button>
               <Button 
                 size="lg" 
-                variant="outline" 
-                className="text-lg px-8 font-semibold" style={{backgroundColor: '#ffffff'}}
+                className="bg-[#ed2025] hover:bg-[#ed2025]/90 text-white text-lg px-8 font-semibold"
               >
                 Partner With Us
               </Button>
               <Button 
                 size="lg" 
-                variant="outline" 
-                className="text-lg px-8 font-semibold"
+                className="bg-[#ed2025] hover:bg-[#ed2025]/90 text-white text-lg px-8 font-semibold"
               >
                 Volunteer
               </Button>
@@ -347,7 +352,7 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-card">
+      <section id="contact" className="py-12 md:py-15 bg-card">
         <div className="container">
           <div className="max-w-4xl mx-auto">
             <h2 

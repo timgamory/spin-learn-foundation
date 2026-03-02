@@ -38,6 +38,9 @@
 - [x] Added deep blue background (#00548a) and white text to navigation hover effect across all pages
 - [x] Remove dark blue background box from nav links and replace with simple thin underline (#00548a)
 - [x] Replace 'Our Impact' section with 'Our 2026 Goals' section with three goal cards
+- [x] Batch 1: Reduce vertical spacing between sections to max 60px desktop / 40px mobile
+- [x] Batch 2: Replace carousel with 3-column grid layout (6-8 photos)
+- [x] Batch 3: Make all CTA buttons consistent (yellow primary, red secondary, no arrows)
 - [ ] Add admin navigation link to main website (visible only to admins)
 - [ ] Create functional contact form with email integration
 - [ ] Add testimonials section with rotating quotes
