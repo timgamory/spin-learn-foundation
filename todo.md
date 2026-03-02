@@ -52,7 +52,7 @@
 - [x] HIGH: Add CTAs to Mission and Photo Gallery sections
 - [ ] MEDIUM: Standardize grid gaps throughout the page
 - [ ] MEDIUM: Remove inline style overrides and use Tailwind classes
-- [ ] MEDIUM: Add success feedback to newsletter signup
+- [x] MEDIUM: Add success feedback to newsletter signup
 - [ ] MEDIUM: Ensure all footer links have corresponding section IDs
 - [ ] LOW: Add decorative elements between sections
 - [ ] LOW: Add text-shadow to hero heading for readability

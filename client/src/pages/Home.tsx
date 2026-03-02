@@ -11,12 +11,17 @@ import { Link } from "wouter";
 import { useState, useEffect } from "react";
 import { useAuth } from "@/_core/hooks/useAuth";
 import { trpc } from "@/lib/trpc";
+import { CheckCircle } from "lucide-react";
 
 export default function Home() {
   // The userAuth hooks provides authentication state
   // To implement login/logout functionality, simply call logout() or redirect to getLoginUrl()
   let { user, loading, error, isAuthenticated, logout } = useAuth();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [newsletterEmail, setNewsletterEmail] = useState('');
+  const [newsletterError, setNewsletterError] = useState('');
+  const [newsletterSuccess, setNewsletterSuccess] = useState(false);
+  const [newsletterSubmitting, setNewsletterSubmitting] = useState(false);
 
   const { data: dbCarouselImages = [] } = trpc.carousel.list.useQuery();
   
@@ -28,6 +33,45 @@ export default function Home() {
         '/images/hero-community.png',
         '/images/adult-programs.jpg'
       ];
+
+  const validateEmail = (email: string) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setNewsletterError('');
+    setNewsletterSuccess(false);
+
+    if (!newsletterEmail.trim()) {
+      setNewsletterError('Please enter your email address');
+      return;
+    }
+
+    if (!validateEmail(newsletterEmail)) {
+      setNewsletterError('Please enter a valid email address');
+      return;
+    }
+
+    setNewsletterSubmitting(true);
+    
+    try {
+      // Simulate API call - replace with actual tRPC mutation when backend is ready
+      await new Promise(resolve => setTimeout(resolve, 500));
+      setNewsletterSuccess(true);
+      setNewsletterEmail('');
+      
+      // Auto-hide success message after 5 seconds
+      setTimeout(() => {
+        setNewsletterSuccess(false);
+      }, 5000);
+    } catch (err) {
+      setNewsletterError('Failed to subscribe. Please try again.');
+    } finally {
+      setNewsletterSubmitting(false);
+    }
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -440,14 +484,39 @@ export default function Home() {
                 <p className="text-muted-foreground mb-8 leading-relaxed">
                   Get updates on programs, events, and ways to get involved
                 </p>
-                <form className="space-y-3" onSubmit={(e) => e.preventDefault()}>
-                  <input 
-                    type="email" 
-                    placeholder="Enter your email" 
-                    className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary transition-all"
-                  />
-                  <Button className="w-full bg-[#00548a] hover:bg-[#00548a]/90 text-white font-semibold py-3">
-                    Subscribe
+                {newsletterSuccess && (
+                  <div className="mb-4 p-4 bg-green-50 border border-green-200 rounded-lg flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="text-green-800 font-semibold text-sm">Success!</p>
+                      <p className="text-green-700 text-sm">Thank you for subscribing. Check your email for updates.</p>
+                    </div>
+                  </div>
+                )}
+                <form className="space-y-3" onSubmit={handleNewsletterSubmit}>
+                  <div>
+                    <input 
+                      type="email" 
+                      placeholder="Enter your email" 
+                      value={newsletterEmail}
+                      onChange={(e) => {
+                        setNewsletterEmail(e.target.value);
+                        setNewsletterError('');
+                      }}
+                      className={`w-full px-4 py-3 rounded-lg border bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 transition-all ${
+                        newsletterError ? 'border-red-500 focus:ring-red-500' : 'border-border focus:ring-primary'
+                      }`}
+                    />
+                    {newsletterError && (
+                      <p className="text-red-600 text-sm mt-2">{newsletterError}</p>
+                    )}
+                  </div>
+                  <Button 
+                    type="submit"
+                    disabled={newsletterSubmitting}
+                    className="w-full bg-[#00548a] hover:bg-[#00548a]/90 text-white font-semibold py-3 disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    {newsletterSubmitting ? 'Subscribing...' : 'Subscribe'}
                   </Button>
                 </form>
               </div>
