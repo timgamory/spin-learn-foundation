@@ -24,6 +24,7 @@ export default function Home() {
   const [newsletterSubmitting, setNewsletterSubmitting] = useState(false);
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
+  const [isHovering, setIsHovering] = useState(false);
 
   const { data: dbCarouselImages = [] } = trpc.carousel.list.useQuery();
   
@@ -35,6 +36,17 @@ export default function Home() {
         '/images/hero-community.png',
         '/images/adult-programs.jpg'
       ];
+
+  // Auto-play slider every 5 seconds
+  useEffect(() => {
+    if (isHovering || carouselImages.length === 0) return;
+    
+    const interval = setInterval(() => {
+      setLightboxIndex((prevIndex) => (prevIndex + 1) % carouselImages.length);
+    }, 5000);
+    
+    return () => clearInterval(interval);
+  }, [isHovering, carouselImages.length]);
 
   const validateEmail = (email: string) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -280,7 +292,7 @@ export default function Home() {
             Our Community in Action
           </h2>
           <div className="max-w-4xl mx-auto">
-            <div className="relative">
+            <div className="relative" onMouseEnter={() => setIsHovering(true)} onMouseLeave={() => setIsHovering(false)}>
               {/* Slider Container */}
               <div className="relative h-96 md:h-[500px] overflow-hidden rounded-lg">
                 <img 
