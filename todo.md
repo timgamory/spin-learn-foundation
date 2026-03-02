@@ -43,6 +43,7 @@
 - [x] Batch 3: Make all CTA buttons consistent (yellow primary, red secondary, no arrows)
 - [x] Batch 4: Update 2026 Goals icons and fix Card 1 description text
 - [x] Batch 5: Reorganize Join Us buttons and replace Grantmakers with newsletter signup
+- [x] Redesign Get In Touch section for better aesthetic and layout
 - [ ] Add admin navigation link to main website (visible only to admins)
 - [ ] Create functional contact form with email integration
 - [ ] Add testimonials section with rotating quotes

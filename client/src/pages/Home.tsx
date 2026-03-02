@@ -346,51 +346,58 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-12 md:py-15 bg-card">
+      <section id="contact" className="py-12 md:py-15 bg-background">
         <div className="container">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-5xl mx-auto">
             <h2 
-              className="text-4xl md:text-5xl font-black text-foreground mb-12 text-center"
+              className="text-4xl md:text-5xl font-black text-foreground mb-16 text-center"
               style={{ fontFamily: 'var(--font-display)' }}
             >
               Get In Touch
             </h2>
-            <div className="grid md:grid-cols-2 gap-12">
-              <div>
-                <h3 className="text-2xl font-bold text-foreground mb-6">Contact Information</h3>
-                <div className="space-y-4">
-                  <div className="flex items-start gap-3">
-                    <Mail className="w-5 h-5 text-primary mt-1" />
+            <div className="grid md:grid-cols-2 gap-12 md:gap-16">
+              {/* Contact Information Card */}
+              <div className="bg-card rounded-lg p-8 border border-border/50">
+                <h3 className="text-2xl font-bold text-foreground mb-8">Contact Information</h3>
+                <div className="space-y-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <Mail className="w-5 h-5 text-primary" />
+                    </div>
                     <div>
-                      <div className="font-medium text-foreground">Email</div>
-                      <div className="text-muted-foreground">info@spinandlearn.org</div>
+                      <div className="font-semibold text-foreground text-sm">Email</div>
+                      <a href="mailto:info@spinandlearn.org" className="text-primary hover:text-primary/80 transition-colors">info@spinandlearn.org</a>
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-3">
-                    <MapPin className="w-5 h-5 text-primary mt-1" />
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <MapPin className="w-5 h-5 text-primary" />
+                    </div>
                     <div>
-                      <div className="font-medium text-foreground">Location</div>
+                      <div className="font-semibold text-foreground text-sm">Location</div>
                       <div className="text-muted-foreground">The Bronx, New York</div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div>
-                <h3 className="text-2xl font-bold text-foreground mb-6">Stay Connected</h3>
-                <p className="text-muted-foreground mb-6">
+              
+              {/* Newsletter Card */}
+              <div className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-lg p-8 border border-primary/20">
+                <h3 className="text-2xl font-bold text-foreground mb-3">Stay Connected</h3>
+                <p className="text-muted-foreground mb-8 leading-relaxed">
                   Get updates on programs, events, and ways to get involved
                 </p>
-                <div className="flex flex-col gap-3">
+                <form className="space-y-3" onSubmit={(e) => e.preventDefault()}>
                   <input 
                     type="email" 
                     placeholder="Enter your email" 
-                    className="px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                    className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary transition-all"
                   />
-                  <Button className="bg-[#00548a] hover:bg-[#00548a]/90 text-white font-semibold">
+                  <Button className="w-full bg-[#00548a] hover:bg-[#00548a]/90 text-white font-semibold py-3">
                     Subscribe
                   </Button>
-                </div>
+                </form>
               </div>
             </div>
           </div>
