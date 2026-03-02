@@ -216,10 +216,6 @@ export default function About() {
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-accent mt-1">•</span>
-                        <span>Nasdaq Milestone Circles Fellow</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-accent mt-1">•</span>
                         <span>Community Enterprise Accelerator Fellow</span>
                       </li>
                       <li className="flex items-start gap-2">
