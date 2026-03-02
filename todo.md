@@ -56,6 +56,7 @@
 - [x] Add keyboard navigation to image slider (arrow keys + Escape)
 - [x] Add touch/swipe gestures for mobile
 - [x] Add accessibility labels and aria attributes
+- [x] Increase image slider size and make it more prominent on the page
 - [ ] MEDIUM: Standardize grid gaps throughout the page
 - [ ] MEDIUM: Remove inline style overrides and use Tailwind classes
 - [x] MEDIUM: Add success feedback to newsletter signup
