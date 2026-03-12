@@ -89,3 +89,4 @@
 - ✓ All carousel database tests passing (5 tests)
 - ✓ Auth logout test passing (1 test)
 - Total: 6/6 tests passing
+- [x] Fix home page SEO: title (30-60 chars), meta description (50-160 chars), keywords

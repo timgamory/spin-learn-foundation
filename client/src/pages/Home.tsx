@@ -90,6 +90,34 @@ export default function Home() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [carouselImages.length, lightboxOpen]);
 
+  // SEO: Set page title, meta description, and keywords
+  useEffect(() => {
+    // Title: 30-60 characters
+    document.title = 'Spin & Learn Foundation | Bronx Table Tennis';
+
+    // Meta description
+    let descMeta = document.querySelector('meta[name="description"]');
+    if (!descMeta) {
+      descMeta = document.createElement('meta');
+      descMeta.setAttribute('name', 'description');
+      document.head.appendChild(descMeta);
+    }
+    descMeta.setAttribute('content', 'Spin & Learn Foundation brings world-class table tennis programs to youth, adults, and seniors in the Bronx, NY. Free and low-cost programs promoting wellness, resilience, and leadership.');
+
+    // Meta keywords
+    let keywordsMeta = document.querySelector('meta[name="keywords"]');
+    if (!keywordsMeta) {
+      keywordsMeta = document.createElement('meta');
+      keywordsMeta.setAttribute('name', 'keywords');
+      document.head.appendChild(keywordsMeta);
+    }
+    keywordsMeta.setAttribute('content', 'table tennis, Bronx, nonprofit, youth programs, ping pong, community, wellness, sports, New York City, after school programs, senior programs, ITTF, Spin and Learn');
+
+    return () => {
+      document.title = 'Spin & Learn Foundation';
+    };
+  }, []);
+
   // Touch swipe handler
   const handleTouchStart = (e: React.TouchEvent) => {
     setTouchStart(e.targetTouches[0].clientX);
