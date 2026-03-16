@@ -104,8 +104,8 @@ export default function Contact() {
                 <Mail className="w-8 h-8 text-primary" />
               </div>
               <h3 className="text-xl font-bold text-foreground mb-2">Email</h3>
-              <p className="text-muted-foreground mb-4">info@spinandlearn.com</p>
-              <a href="mailto:info@spinandlearn.com" className="text-primary hover:border-b-2 hover:border-[#ffe929]/80 transition-colors font-medium">
+              <p className="text-muted-foreground mb-4">info@spinandlearn.org</p>
+              <a href="mailto:info@spinandlearn.org" className="text-primary hover:border-b-2 hover:border-[#ffe929]/80 transition-colors font-medium">
                 Send us an email
               </a>
             </Card>
