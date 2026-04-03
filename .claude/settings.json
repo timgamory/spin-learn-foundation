@@ -1,0 +1,38 @@
+{
+  "permissions": {
+    "defaultMode": "acceptEdits",
+    "deny": [
+      "Bash(git push --force*)",
+      "Bash(git push -f *)",
+      "Bash(git push -f)",
+      "Bash(git reset --hard*)",
+      "Bash(git branch -D*)",
+      "Bash(git clean -f*)",
+      "Bash(rm -rf*)"
+    ]
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "printf '{\"hookSpecificOutput\":{\"hookEventName\":\"SessionStart\",\"additionalContext\":\"EDITOR WORKFLOW: This project is maintained by a nontechnical editor. (1) Immediately call the preview_start MCP tool with name=dev to start the live preview before your first response. (2) After making changes, proactively offer to commit them using format: Checkpoint: [plain-English description]. (3) save my changes / commit = git commit with descriptive message. (4) push my changes = commit if needed, push to main, open a PR. (5) get updates / pull = git pull origin main. (6) undo my last change = git revert HEAD. Keep all explanations simple and jargon-free.\"}}'",
+            "statusMessage": "Loading editor workflow..."
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "if git status --porcelain 2>/dev/null | grep -qv '^??'; then echo '{\"systemMessage\":\"You have unsaved changes. Tell Claude \\\"save my changes\\\" to commit, or \\\"push my changes\\\" to share on GitHub.\"}'; fi",
+            "statusMessage": "Checking for unsaved changes..."
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -74,17 +74,6 @@ export default function Programs() {
                 <p className="text-muted-foreground mb-6 text-lg leading-relaxed">
                   After-school and weekend programs that build skills on and off the table. Young players learn proper technique, develop focus and discipline, and build confidence through friendly competition.
                 </p>
-                <div className="mb-6 p-4 bg-accent/10 rounded-lg">
-                  <p className="text-sm font-semibold text-foreground mb-3">Our CHAMPS Framework:</p>
-                  <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li><strong>Character:</strong> Developing respectful, resilient team players</li>
-                    <li><strong>Health:</strong> Active bodies lead to sharper minds</li>
-                    <li><strong>Achievement:</strong> Setting high standards in sport and school</li>
-                    <li><strong>Motivation:</strong> Building confidence to push past limits</li>
-                    <li><strong>Perseverance:</strong> Learning that grit wins games and life challenges</li>
-                    <li><strong>Support:</strong> Creating a safe, encouraging environment</li>
-                  </ul>
-                </div>
                 <ul className="space-y-2 text-muted-foreground">
                   <li className="flex items-start gap-2">
                     <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2"></div>
